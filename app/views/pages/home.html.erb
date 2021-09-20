@@ -1,2 +1,87 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="front-page" style="background-image: url('<%= image_path 'antartica1.jpeg' %>')" id="home">
+  <div class="container banner">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6 text-right">         
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 text-right">
+        <div class="front-page-content1">
+          <h1>Sistema de Coleta de Dados</h1>
+          <h1>Antártica</h1>
+        </div>
+        <div class="front-page-content2">
+          <span class="summary quotes">A front-end web developer</span><span class="summary quotes">A back-end web developer</span><span class="summary quotes">A software developer</span><br><br>
+        </div>
+        <div class="front-page-content3">
+          <a href="#contact-me">
+            <div class="orange-button">
+              DADOS
+            </div>
+          </a>
+          <a href="#about-me">
+            <div class="white-button">
+              SAIBA MAIS
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about-me-strip" id="about-me">
+  <div class="container reveal">
+    <div class="title text-center">
+      Operantar XL
+    </div>
+    <div class="sub-title text-center">
+      Projeto CEOAC-REMObs
+    </div>
+  </div>
+</div>
+<div class="container" id="projetos">
+	 <h2>FALAR DA PESQUISA EM CONJUNTO</h2>
+</div>
+<div class="container">
+  <h2 class="text-center mt-4">POSIÇÃO DOS SISTEMAS DE COLETA</h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6 text-right">         
+				<div id="map"
+							style="width: 100%; height: 600px;"
+							data-markers="<%= @systems.to_json %>"
+							data-almirantadoint="<%= @almirantado_int_data.to_json %>"
+							data-almirantadoext="<%= @almirantado_ext_data.to_json %>"
+							data-inpe="<%= @inpe_data.to_json %>"
+							data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+				</div>
+			</div>
+      <div class="col-sm-12 col-md-6 col-lg-6 text-right"> 
+				<div class="card-product">
+					<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+					<div class="card-product-infos">
+						<h2>Product name</h2>
+						<p>Product description with <strong>relevant info</strong> only.</p>
+					</div>
+				</div>
+				<div class="card-product">
+					<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+					<div class="card-product-infos">
+						<h2>Product name</h2>
+						<p>Product description with <strong>relevant info</strong> only.</p>
+					</div>
+				</div>
+				<div class="card-product">
+					<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+					<div class="card-product-infos">
+						<h2>Product name</h2>
+						<p>Product description with <strong>relevant info</strong> only.</p>
+					</div>
+				</div>
+      </div>
+		</div>
+</div>
+<div>
+	 <h2>FIGURA DE FUNDO</h2>
+</div>
+<div class="container" id="graficos">
+	 <h2>COLOCAR GRÁFICOS</h2>
+</div>
+

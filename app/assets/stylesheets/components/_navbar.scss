@@ -1,12 +1,36 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  background-color: black;
+    -webkit-transition: background-color 2s ease-in;
+   -moz-transition: background-color 2s ease-in;
+    -ms-transition: background-color 2s ease-in;
+     -o-transition: background-color 2s ease-in;
+        transition: background-color 2s ease-in;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1000;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  padding-top: 13px;
+   
+  .text {
+    margin-top: 13px;
+  }
+
+  a {
+    padding-bottom: 5px;
+    padding-right:15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.75s;
+    transition: border-bottom 0.75s;
+    &:hover {
+      border-bottom: 1px solid #3FAEFD;
+    }
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */	
 }
