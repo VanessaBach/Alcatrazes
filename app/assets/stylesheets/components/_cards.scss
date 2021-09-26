@@ -38,13 +38,26 @@
   width: 40px;
 }
 
+.box{
+  -webkit-transition: box-shadow 0.5s, background 0.5s, color 0.5s;
+  transition: box-shadow 0.5s, background 0.5s, color 0.5s;
+  :hover {
+    -moz-box-shadow: 0 0 10px grey;
+    -webkit-box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 10px grey;
+    background: #FEDC37;
+    color: black;
+  }
+}
+
 .card-product {
   overflow: hidden;
-  height: 120px;
-  background: white;
+  // height: 120px;
+  background: #008CEA;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  height: 199px;
 }
 
 .card-product img {
