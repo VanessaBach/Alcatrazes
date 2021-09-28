@@ -29,6 +29,8 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initPlotly } from '../plugins/init_plotly';
+import { initChart } from '../plugins/init_chart';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -38,4 +40,6 @@ document.addEventListener('turbolinks:load', () => {
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initPlotly();
+  initChart();
 })

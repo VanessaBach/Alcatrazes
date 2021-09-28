@@ -141,10 +141,73 @@
 		</div>
 	</div>
 </div>
+
 <div class="container" id="fundo">
-	 <h2>FIGURA DE FUNDO</h2>
+	<h2>FIGURA DE FUNDO</h2>
 </div>
+
 <div class="container" id="graficos">
-	 <h2>COLOCAR GRÁFICOS</h2>
+	<h3 class='mt-5'>FILTRAR POR DATA</h3>
+  <%= form_tag root_path, method: :get, class: 'form-horizontal d-flex mt-5' do %>
+    <%= date_field_tag :start_date,
+      params[:start_date],
+      class: "form-control mb-2",
+      placeholder: "Data Inicial"
+    %>
+    <%= date_field_tag :end_date,
+      params[:end_date],
+      class: "form-control mb-2",
+      placeholder: "Data Final"
+    %>
+    <%= submit_tag "Procurar", class: "btn btn-outline-success align-middle button" %>
+  <% end %>
+
+	<div id="plotdata"
+    data-almirantadoint="<%= @almirantado_int_data.to_json %>"
+		data-almirantadoext="<%= @almirantado_ext_data.to_json %>"
+		data-inpe="<%= @inpe_data.to_json %>">
+    <div id="wspd-plot" class='graph'>
+    </div>
+    <div id="wdir-plot" class='graph'>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div id="wdir-plot-almirantadoint" class='graph'>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div id="wdir-plot-almirantadoext" class='graph'>
+        </div>
+      </div>
+			<div class="col-sm-12 col-md-4">
+        <div id="wdir-plot-inpe" class='graph'>
+        </div>
+      </div>
+    </div>
+    <div id="swvht-plot" class='graph'>
+    </div>
+    <div id="wvdir-plot" class='graph'>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div id="wvdir-plot-almirantadoint" class='graph'>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div id="wvdir-plot-almirantadoext" class='graph'>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div id="wvdir-plot-inpe" class='graph'>
+        </div>
+      </div>
+    </div>
+    <div id="mxwvht-plot" class='graph'>
+    </div>
+    <div id="tp-plot" class='graph'>
+    </div>
+    <div id="sst-plot" class='graph'>
+    </div>
+  </div>
 </div>
 
