@@ -21,9 +21,14 @@ html, body {
   justify-content: center;
 
   color: black;
+  h1 {
+    text-shadow: 3px 3px 0px white, -2px 1px 30px white;
+  }
+
   .title {
     font-size: 80px;
     font-weight:200;
+    
     .underline {
       border-bottom: 2px solid #3FAEFD;
     }
@@ -44,11 +49,11 @@ html, body {
     float:right;
     margin-right: 10px;
     border-radius: 5px;
-    -webkit-transition: background-color 0.75s, color 0.75s;
-    transition: background-color 0.75s, color 0.75s;
+    text-shadow: 0px 0px 8px black, 1px 0px 2px white;
     &:hover {
       background-color: white;
       color: grey;
+      text-shadow: none;
     }
   }
 

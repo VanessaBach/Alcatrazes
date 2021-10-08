@@ -1,6 +1,8 @@
-.navbar-lewagon {
-  background-color: black;
-    -webkit-transition: background-color 2s ease-in;
+// navigation bar styling
+.navbar {
+  overflow: hidden;
+  background-color:rgba(0, 0, 0, 0.0);
+  -webkit-transition: background-color 2s ease-in;
    -moz-transition: background-color 2s ease-in;
     -ms-transition: background-color 2s ease-in;
      -o-transition: background-color 2s ease-in;
@@ -12,17 +14,16 @@
   color: white;
   font-family: 'Fira Sans', sans-serif;
   padding-top: 13px;
-   
+  img {
+    height: 22px;
+  }
   .text {
     margin-top: 13px;
   }
-
   a {
-    padding-bottom: 5px;
-    padding-right:15px;
-    padding-left:15px;
     color: white;
     text-decoration: none;
+    padding-bottom: 5px;
     border-bottom: 1px solid transparent;
     -webkit-transition: border-bottom 0.75s;
     transition: border-bottom 0.75s;
@@ -32,6 +33,6 @@
   }
 }
 
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */	
+.nav-bg {
+  background-color:rgba(0, 0, 0, 0.3);
 }
