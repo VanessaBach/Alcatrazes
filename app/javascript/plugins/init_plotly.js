@@ -14,7 +14,6 @@ const initPlotly = () => {
     plotWdir(almirantadointData, almirantadoextData, inpeData);
     plotWdirg(almirantadointData, almirantadoextData, inpeData);
     plotSwvht(almirantadointData, almirantadoextData, inpeData);
-    plotMxwvht(almirantadointData, almirantadoextData, inpeData);
     plotWvdirg(almirantadointData, almirantadoextData, inpeData);
     plotWvdir(almirantadointData, almirantadoextData, inpeData);
     plotSst(almirantadointData, almirantadoextData, inpeData);
@@ -260,8 +259,6 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
     var config = {responsive: true}
 
     Plotly.newPlot('wdir-plot-inpe', data3, layout3);
-
-
 };
 
 

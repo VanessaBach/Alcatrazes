@@ -13,17 +13,13 @@
   z-index: 1000;
   color: white;
   font-family: 'Fira Sans', sans-serif;
-  padding-top: 13px;
-  img {
-    height: 22px;
-  }
+  
   .text {
     margin-top: 13px;
   }
   a {
     color: white;
     text-decoration: none;
-    padding-bottom: 5px;
     border-bottom: 1px solid transparent;
     -webkit-transition: border-bottom 0.75s;
     transition: border-bottom 0.75s;
@@ -35,4 +31,18 @@
 
 .nav-bg {
   background-color:rgba(0, 0, 0, 0.3);
+}
+
+.nav-img{
+  height: 50px;
+  width: auto;
+  margin-left: 10px;
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+	.nav-img{
+	  width: 30px;
+	  margin-left: 5px;
+	}
 }

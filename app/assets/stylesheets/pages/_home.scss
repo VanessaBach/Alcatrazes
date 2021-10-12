@@ -57,48 +57,37 @@ html, body {
     }
   }
 
-  .orange-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    height: 60px;
-    width: 140px;
-    background-color: #3FAEFD;
-    border-radius: 5px;
-    float:right;
-    -webkit-transition: background-color 0.75s, color 0.75s;
-    transition: background-color 0.75s, color 0.75s;
-    &:hover {
-      background-color: #FEDC37;
-    }
-  }
-
   a {
     color: white;
   }
 }
 
-
-
-.about-me-strip {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 100%;
-  background: #FEDC37;
-  color: white;
-  .title {
-    font-size: 70px;
-    font-weight:200;
-    color: black;
-  }
-  .sub-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight:200;
-    color: black;
+.orange-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 60px;
+  width: 140px;
+  background-color: #3FAEFD;
+  border-radius: 5px;
+  float:right;
+  -webkit-transition: background-color 0.75s, color 0.75s;
+  transition: background-color 0.75s, color 0.75s;
+  &:hover {
+    background-color: #FEDC37;
   }
 }
+
+.projetos {
+  background-color:#F4F4F4;
+  color: black;
+  padding: 10px;
+  h2 {
+    text-align: center;
+  }
+}
+
 
 .tempo-real {
   padding-top: 15px;
