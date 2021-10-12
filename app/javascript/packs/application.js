@@ -32,10 +32,12 @@ import { initPlotly } from '../plugins/init_plotly';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initSmooth } from '../components/smooth';
+import { initQuotes } from '../components/quotes';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initPlotly();
   initSmooth();
   initUpdateNavbarOnScroll();
+  initQuotes();
 })
