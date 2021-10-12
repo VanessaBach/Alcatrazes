@@ -50,10 +50,16 @@
 			<div class="col-sm-12 col-md-6 col-lg-6 text-right box"> 
 				<% @systems.each do |system| %> 			
 					<div class="card-product mt-1">
-						<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <% if system.name.downcase == 'almirantado_int' %>
+              <%= image_tag "spotter_blue.jpeg"%>
+            <% elsif system.name.downcase == 'almirantado_ext'  %>
+              <%= image_tag "spotter_yellow.jpeg"%>
+            <% else %>
+              <%= image_tag "spotter_green.jpeg"%>
+            <% end %>
 						<div class="card-product-infos">
 							<h3><%=system.name.upcase%></h3>
-							<% if system.name.upcase == 'almirantado_int' %>
+							<% if system.name.downcase == 'almirantado_int' %>
 								<% if @almirantado_int_data[:swvht][-3] %>
 									<p>ÚLTIMO DADO: <%= @almirantado_int_data[:date_time][-3].strftime('%Y/%m/%d %H:%M')%></p>
 									<p>ALTURA ONDAS: <%= @almirantado_int_data[:swvht][-3].round(1)%> m</p>
@@ -77,7 +83,7 @@
 										<p>RAJADA: <%= @almirantado_int_data[:gust][-2].round()%> m/s</p>
 									<% end %>
 								<% end %>			
-							<% elsif system.name.upcase == 'almirantado_ext' %>			
+							<% elsif system.name.downcase == 'almirantado_ext' %>
 								<% if @almirantado_int_data[:swvht][-3] %>
 									<p>ÚLTIMO DADO: <%= @almirantado_ext_data[:date_time][-3].strftime('%Y/%m/%d %H:%M')%></p>
 									<p>ALTURA ONDAS: <%= @almirantado_ext_data[:swvht][-3].round(1)%> m</p>
@@ -101,7 +107,7 @@
 										<p>RAJADA: <%= @almirantado_ext_data[:gust][-2].round()%> m/s</p>
 									<% end %>
 								<% end %>		
-							<% else system.name.upcase == 'inpe' %>
+							<% else system.name.downcase == 'inpe' %>
 								<% if @inpe_data[:swvht][-3] %>
 									<p>ÚLTIMO DADO: <%= @inpe_data[:date_time][-3].strftime('%Y/%m/%d %H:%M')%></p>
 									<p>ALTURA ONDAS: <%= @inpe_data[:swvht][-3].round(1)%> m</p>
