@@ -64,7 +64,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
-        title: 'Tempo',
+        // title: 'Tempo',
         showgrid: true,
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -132,7 +132,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
-        title: 'Tempo',
+        // title: 'Tempo',
         showgrid: true,
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -409,7 +409,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
-        title: 'Tempo',
+        // title: 'Tempo',
         showgrid: true,
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -477,7 +477,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
-        title: 'Tempo',
+        // title: 'Tempo',
         showgrid: true,
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -544,7 +544,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
-        title: 'Tempo',
+        // title: 'Tempo',
         showgrid: true,
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'

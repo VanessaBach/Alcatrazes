@@ -113,12 +113,10 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  .line {
-    margin:0 auto;
-    width: 130px;
-    border-bottom: 2px solid #FEDC37;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+}
 
+.graficos {
+  h3 {
+    text-align: center;
+  }
 }
