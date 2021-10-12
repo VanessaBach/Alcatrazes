@@ -1,7 +1,7 @@
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: 'Dosis', sans-serif;
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Fira Sans', 'sans-serif';
 }
 
 .gap {
@@ -23,19 +23,13 @@ html, body {
   color: black;
   h1 {
     text-shadow: 3px 3px 0px white, -2px 1px 30px white;
+    font-weight: bold;
   }
 
-  .title {
-    font-size: 80px;
-    font-weight:200;
-    
-    .underline {
-      border-bottom: 2px solid #3FAEFD;
-    }
-  }
-  .summary {
-    font-size: 35px;
-    font-weight:200;
+  p {
+    font-size: 40px;
+    text-shadow: 3px 3px 0px white, -2px 1px 30px white;
+    font-weight: bold;
   }
 
   .white-button {
@@ -46,6 +40,7 @@ html, body {
     height: 60px;
     width: 140px;
     border: 4px solid white;
+    font-weight: bold;
     float:right;
     margin-right: 10px;
     border-radius: 5px;
@@ -57,48 +52,38 @@ html, body {
     }
   }
 
-  .orange-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    height: 60px;
-    width: 140px;
-    background-color: #3FAEFD;
-    border-radius: 5px;
-    float:right;
-    -webkit-transition: background-color 0.75s, color 0.75s;
-    transition: background-color 0.75s, color 0.75s;
-    &:hover {
-      background-color: #FEDC37;
-    }
-  }
-
   a {
     color: white;
   }
 }
 
-
-
-.about-me-strip {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 100%;
-  background: #FEDC37;
-  color: white;
-  .title {
-    font-size: 70px;
-    font-weight:200;
-    color: black;
-  }
-  .sub-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight:200;
-    color: black;
+.orange-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 60px;
+  width: 140px;
+  font-weight: bold;
+  background-color: #3FAEFD;
+  border-radius: 5px;
+  float:right;
+  -webkit-transition: background-color 0.75s, color 0.75s;
+  transition: background-color 0.75s, color 0.75s;
+  &:hover {
+    background-color: #FEDC37;
   }
 }
+
+.projetos {
+  background-color:#F4F4F4;
+  color: black;
+  padding: 10px;
+  h2 {
+    text-align: center;
+  }
+}
+
 
 .tempo-real {
   padding-top: 15px;

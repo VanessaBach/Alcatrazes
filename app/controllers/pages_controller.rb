@@ -12,7 +12,7 @@ class PagesController < ApplicationController
       start_date = Date.parse start_date
       end_date = Date.parse end_date
     else
-        start_date = (Time.now - 2.day)
+        start_date = (Time.now - 1.day)
         end_date = (Time.now + 1.day)
     end
     if start_date < (Time.now - 5.day)
