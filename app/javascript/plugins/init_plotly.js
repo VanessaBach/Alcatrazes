@@ -27,7 +27,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadointData.date_time,
       y: almirantadointData.wvdir,
       mode: 'lines+markers',
-      name: 'almirantado_int',
+      name: 'KELLER',
       line: {
         color: '#c22d45',
         width: 2
@@ -38,7 +38,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.wvdir,
       mode: 'lines+markers',
-      name: 'almirantado_ext',
+      name: 'ALMIRANTADO',
       line: {
         color: '#2f42ad',
         width: 2
@@ -49,7 +49,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: inpeData.date_time,
       y: inpeData.wvdir,
       mode: 'lines+markers',
-      name: 'inpe',
+      name: 'PINGUIM',
       line: {
         color: '#486641',
         width: 2,
@@ -60,7 +60,13 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
     const data = [almirantadointWvdir, almirantadoextWvdir, inpeWvdir];
 
     var layout = {
-      title: 'DIREÇÃO DAS ONDAS',
+      title: {
+        text: 'DIR. ONDAS',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 24
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
@@ -70,16 +76,21 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Direção das ondas (°)',
+        title: 'Dir. ondas (°)',
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       showlegend: true,
-      legend: {
-        x: 1,
-        xanchor: 'right',
-        y: 1
+      legend:{"orientation": "h",
+        x: 0,
+        y: -0.2,
+        traceorder: 'normal',
+        font: {
+          family: 'sans-serif',
+          size: 10,
+          color: '#000'
+        }
       }
     };
 
@@ -96,7 +107,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadointData.date_time,
       y: almirantadointData.wdir,
       mode: 'lines+markers',
-      name: 'almirantado_int',
+      name: 'KELLER',
       line: {
         color: '#c22d45',
         width: 2
@@ -107,7 +118,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.wdir,
       mode: 'lines+markers',
-      name: 'almirantado_ext',
+      name: 'ALMIRANTADO',
       line: {
         color: '#2f42ad',
         width: 2
@@ -118,7 +129,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: inpeData.date_time,
       y: inpeData.wdir,
       mode: 'lines+markers',
-      name: 'inpe',
+      name: 'PINGUIM',
       line: {
         color: '#486641',
         width: 2
@@ -128,7 +139,13 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
     const data = [almirantadointWdir, almirantadoextWdir, inpeWdir];
 
     var layout = {
-      title: 'DIREÇÃO DO VENTO',
+      title: {
+        text: 'DIR. VENTO',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 24
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
@@ -144,13 +161,17 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       showlegend: true,
-      legend: {
-        x: 1,
-        xanchor: 'right',
-        y: 1
+      legend:{"orientation": "h",
+        x: 0,
+        y: -0.2,
+        traceorder: 'normal',
+        font: {
+          family: 'sans-serif',
+          size: 10,
+          color: '#000'
+        }
       }
     };
-
     var config = {responsive: true}
 
     Plotly.newPlot('wdir-plot', data, layout, config);
@@ -173,7 +194,13 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
     const data1 = [almirantadointWdir];
 
     var layout1 = {
-      title: 'DIREÇÃO DO VENTO Almirantado Interna',
+      title: {
+        text: 'KELLER',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 18
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       polar: {
@@ -207,7 +234,13 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
     const data2 = [almirantadoextWdir];
 
     var layout2 = {
-      title: 'DIREÇÃO DO VENTO Almirantado externa',
+      title: {
+        text: 'ALMIRANTADO',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 18
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       polar: {
@@ -239,7 +272,13 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
     const data3 = [inpeWdir];
 
     var layout3 = {
-      title: 'DIREÇÃO DO VENTO Inpe',
+      title: {
+        text: 'PINGUIM',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 18
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       polar: {
@@ -277,7 +316,13 @@ const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
     const data1 = [almirantadointWvdir];
 
     var layout1 = {
-      title: 'DIREÇÃO DAS ONDAS Almirantado Interna',
+      title: {
+        text: 'KELLER',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 18
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       polar: {
@@ -311,7 +356,13 @@ const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
     const data2 = [almirantadoextWvdir];
 
     var layout2 = {
-      title: 'DIREÇÃO DAS ONDAS Almirantado Extrrna',
+      title: {
+        text: 'ALMIRANTADO',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 18
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       polar: {
@@ -343,7 +394,13 @@ const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
     const data3 = [inpeWvdir];
 
     var layout3 = {
-      title: 'DIREÇÃO DAS ONDAS Inpe',
+      title: {
+        text: 'PINGUIM',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 18
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       polar: {
@@ -372,7 +429,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadointData.date_time,
       y: almirantadointData.wspd,
       mode: 'lines+markers',
-      name: 'almirantado_int',
+      name: 'KELLER',
       line: {
         color: '#c22d45',
         width: 2
@@ -383,7 +440,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.wspd,
       mode: 'lines+markers',
-      name: 'almirantado_ext',
+      name: 'ALMIRANTADO',
       line: {
         color: '#2f42ad',
         width: 2
@@ -394,7 +451,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       x: inpeData.date_time,
       y: inpeData.wspd,
       mode: 'lines+markers',
-      name: 'inpe',
+      name: 'PINGUIM',
       line: {
         color: '#486641',
         width: 2,
@@ -405,7 +462,13 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
     const data = [almirantadointWspd, almirantadoextWspd, inpeWspd];
 
     var layout = {
-      title: 'VELOCIDADE DO VENTO',
+      title: {
+        text: 'VELOCIDADE DO VENTO',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 24
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
@@ -415,16 +478,21 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Velocidade do Vento (m/s)',
+        title: 'Veloc. Vento (m/s)',
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       showlegend: true,
-      legend: {
-        x: 1,
-        xanchor: 'right',
-        y: 1
+      legend:{"orientation": "h",
+        x: 0,
+        y: -0.2,
+        traceorder: 'normal',
+        font: {
+          family: 'sans-serif',
+          size: 10,
+          color: '#000'
+        }
       }
     };
 
@@ -440,7 +508,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadointData.date_time,
       y: almirantadointData.swvht,
       mode: 'lines+markers',
-      name: 'almirantado_int',
+      name: 'KELLER',
       line: {
         color: '#c22d45',
         width: 2
@@ -451,7 +519,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.swvht,
       mode: 'lines+markers',
-      name: 'almirantado_ext',
+      name: 'ALMIRANTADO',
       line: {
         color: '#2f42ad',
         width: 2
@@ -462,7 +530,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
       x: inpeData.date_time,
       y: inpeData.swvht,
       mode: 'lines+markers',
-      name: 'inpe',
+      name: 'PINGUIM',
       line: {
         color: '#486641',
         width: 2,
@@ -473,7 +541,13 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
     const data = [almirantadointSwvht, almirantadoextSwvht, inpeSwvht];
 
     var layout = {
-      title: 'ALTURA SIGNIFICATIVA DE ONDA',
+      title: {
+        text: ' ALTURA SIG. ONDA',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 24
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
@@ -489,10 +563,15 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       showlegend: true,
-      legend: {
-        x: 1,
-        xanchor: 'right',
-        y: 1
+      legend:{"orientation": "h",
+        x: 0,
+        y: -0.2,
+        traceorder: 'normal',
+        font: {
+          family: 'sans-serif',
+          size: 10,
+          color: '#000'
+        }
       }
     };
     var config = {responsive: true}
@@ -507,7 +586,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadointData.date_time,
       y: almirantadointData.sst,
       mode: 'lines+markers',
-      name: 'almirantado_int',
+      name: 'KELLER',
       line: {
         color: '#c22d45',
         width: 2
@@ -518,7 +597,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.sst,
       mode: 'lines+markers',
-      name: 'almirantado_ext',
+      name: 'ALMIRANTADO',
       line: {
         color: '#2f42ad',
         width: 2
@@ -529,7 +608,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
       x: inpeData.date_time,
       y: inpeData.sst,
       mode: 'lines+markers',
-      name: 'inpe',
+      name: 'PINGUIM',
       line: {
         color: '#486641',
         width: 2,
@@ -540,7 +619,13 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
     const data = [almirantadointSst, almirantadoextSst,inpeSst];
 
     var layout = {
-      title: 'TEMPERATURA DA ÁGUA DO MAR',
+      title: {
+        text: 'TEMP. ÁGUA DO MAR',
+        font: {
+          family: 'Fira Sans, sans-serif',
+          size: 24
+        },
+      },
       plot_bgcolor:"rgba(0,0,0,0)",
       paper_bgcolor:"rgba(0,0,0,0)",
       xaxis: {
@@ -556,10 +641,15 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       showlegend: true,
-      legend: {
-        x: 1,
-        xanchor: 'right',
-        y: 1
+      legend:{"orientation": "h",
+        x: 0,
+        y: -0.2,
+        traceorder: 'normal',
+        font: {
+          family: 'sans-serif',
+          size: 10,
+          color: '#000'
+        }
       }
     };
     var config = {responsive: true}

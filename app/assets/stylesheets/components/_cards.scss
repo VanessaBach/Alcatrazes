@@ -42,12 +42,21 @@
   -webkit-transition: box-shadow 0.5s, background 0.5s, color 0.5s;
   transition: box-shadow 0.5s, background 0.5s, color 0.5s;
   :hover {
-    -moz-box-shadow: 0 0 10px grey;
-    -webkit-box-shadow: 0 0 10px grey;
-    box-shadow: 0 0 10px grey;
     background: #FEDC37;
     color: black;
   }
+}
+
+@keyframes example {
+  0%   {background-color: #008CEA;}
+  25%  {background-color: #FEDC37;}
+  100% {background-color: #008CEA;}
+}
+
+.card-animation{
+  background-color: #008CEA;
+  animation-name: example;
+  animation-duration: 3s; 
 }
 
 .card-product {
@@ -66,19 +75,20 @@
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
+.card-product h3 {
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
+
 
 .card-product .card-product-infos {
   padding: 16px;

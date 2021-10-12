@@ -25,6 +25,10 @@ const initMapbox = () => {
 		const almirantado_extData = JSON.parse(mapElement.dataset.almirantadoext);
 		const inpeData = JSON.parse(mapElement.dataset.inpe);
 
+		const inpeCard = document.getElementById('inpe');
+		const almirantadoIntCard = document.getElementById('almirantado_int');
+		const almirantadoExtCard = document.getElementById('almirantado_ext');
+
 		markers.forEach((marker) => {
 			if (marker.name === 'almirantado_int') {
 				var almirantado_int = document.createElement('div');
@@ -33,7 +37,7 @@ const initMapbox = () => {
 				almirantado_int.style.backgroundSize = 'contain';
 				almirantado_int.style.width = '50px';
 				almirantado_int.style.height = '38px';
-				new mapboxgl.Marker(almirantado_int)
+				const markerAlmirantadoInt = new mapboxgl.Marker(almirantado_int)
 				.setLngLat([ marker.lon, marker.lat ])
         .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
           <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
@@ -43,6 +47,11 @@ const initMapbox = () => {
           <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_intData.swvht[almirantado_intData.date_time.length -1]} m</p>
           <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_intData.wspd[almirantado_intData.date_time.length -1]} nós</p></div>`))
 				.addTo(map);
+				markerAlmirantadoInt.getElement().addEventListener('click', () => {
+					almirantadoIntCard.classList.remove('card-animation');
+					void 	almirantadoIntCard.offsetWidth; // trigger reflow
+					almirantadoIntCard.classList.add('card-animation');
+        });
 			} else if (marker.name === 'almirantado_ext'){
 				var almirantado_ext = document.createElement('div');
 				almirantado_ext.className = 'marker';
@@ -50,7 +59,7 @@ const initMapbox = () => {
 				almirantado_ext.style.backgroundSize = 'contain';
 				almirantado_ext.style.width = '50px';
 				almirantado_ext.style.height = '38px';
-				new mapboxgl.Marker(almirantado_ext)
+				const markerAlmirantadoExt = new mapboxgl.Marker(almirantado_ext)
 				.setLngLat([ marker.lon, marker.lat ])
         .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
           <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
@@ -60,6 +69,11 @@ const initMapbox = () => {
           <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_extData.swvht[almirantado_extData.date_time.length -1]} m</p>
           <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_extData.wspd[almirantado_extData.date_time.length -1]} nós</p></div>`))
 				.addTo(map);
+				markerAlmirantadoExt.getElement().addEventListener('click', () => {
+					almirantadoExtCard.classList.remove('card-animation');
+					void 	almirantadoExtCard.offsetWidth; // trigger reflow
+					almirantadoExtCard.classList.add('card-animation');
+        });
 			} else {
 				var inpe = document.createElement('div');
 				inpe.className = 'marker';
@@ -67,7 +81,7 @@ const initMapbox = () => {
 				inpe.style.backgroundSize = 'contain';
 				inpe.style.width = '50px';
 				inpe.style.height = '38px';
-				new mapboxgl.Marker(inpe)
+				const markerInpe = new mapboxgl.Marker(inpe)
 				.setLngLat([ marker.lon, marker.lat ])
 				.setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
           <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
@@ -77,6 +91,12 @@ const initMapbox = () => {
 					<p class='m-0 p-0'><strong>Altura Onda:</strong> ${inpeData.swvht[inpeData.date_time.length -1]} m</p>
 					<p class='m-0 p-0'><strong>Vel. Vento:</strong> ${inpeData.wspd[inpeData.date_time.length -1]} nós</p></div>`))
 				.addTo(map);
+				markerInpe.getElement().addEventListener('click', () => {
+					inpeCard.classList.remove('card-animation');
+					void 	inpeCard.offsetWidth; // trigger reflow
+					inpeCard.classList.add('card-animation');
+        });
+
 			}
 		});
 
