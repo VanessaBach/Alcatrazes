@@ -92,3 +92,33 @@ body {
   background: #008CEA;
   color: white;
 }
+
+
+.image-strip {
+  font-size: 60px;
+  font-weight:400;
+  /* The image used */
+  background-image: image-url("image-strip.png");
+
+  /* Set a specific height */
+  height: 180px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  .line {
+    margin:0 auto;
+    width: 130px;
+    border-bottom: 2px solid #FEDC37;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
