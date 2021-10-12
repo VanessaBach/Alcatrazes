@@ -62,7 +62,7 @@
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 180px;
   object-fit: cover;
 }
 
@@ -82,4 +82,9 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.pop-up{
+  color: black;
+  text-align: center !important;
 }
