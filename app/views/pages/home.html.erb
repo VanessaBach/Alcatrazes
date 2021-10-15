@@ -29,8 +29,46 @@
 </div>
 <div class="projetos">
 	<div class= "container text-justify" id="projetos">
-		<h2>PROJETOS CEOAC e REMObs </h2>
-		<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at hendrerit ipsum. Sed quis pellentesque arcu. Pellentesque aliquet libero neque, sit amet mollis sem posuere ut. Curabitur enim eros, sagittis et massa eget, sodales vulputate velit. Donec est nisl, semper vitae nulla et, mattis pellentesque turpis. Mauris hendrerit sem in orci interdum, ac tincidunt dui eleifend. Nulla urna felis, maximus non ipsum rhoncus, sagittis posuere urna. Duis non bibendum ipsum, et pharetra odio. Integer suscipit dolor sit amet ornare fringilla. Suspendisse pulvinar blandit libero, a laoreet ante efficitur at. Proin consequat congue lorem, ut ultrices tellus.</h6>
+		<h2>PROJETOS ATMOS e REMObs </h2>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-6 mt-2">	
+				<div class= "card-project text-align-center">
+					<%= image_tag "ant2.jpg"%>
+				</div>			
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-6 mt-2">
+				<h6>Os projetos ATMOS e REMObs se uniram para gerar um sistema de monitoramento em tempo real das condições 
+				meteorológicas e oceanográficas no continente Antártico. </h6>
+				<h6>Gerenciado pelo Laboratório de Estudos do Oceano e da 
+	      Atmosfera (LOA-OBT), do INPE, o ATMOS é uma iniciativa promissora da ciência, tecnologia e inovação, que visa 
+				melhorar a compreensão das interações entre o gelo marinho-atmosfera-oceano-ondas e as trocas de calor, momentum 
+				(movimento) e CO 2 em suas interfaces no Oceano Austral. </h6>			
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-6 mt-2">	
+				<h6>O projeto REMObs (REMO Observacional), uma parceria entre o Centro de Hidrografia da Marinha (CHM) e a 
+				PETROBRAS, contempla uma união de esforços para o estabelecimento de uma rede de coleta de dados operacionais no Atlântico Sul, o que está sendo
+					de grande importância para a calibração e validação de modelos de previsão meteoceanográfica. Em 2020, o 
+					REMObs ampliou a sua área de atuação para o “Continente Gelado”, com o lançamento de uma boia ondógrafo na região,
+						a boia Spotter. Além das atividades de pesquisa, os dados coletados também são indispensáveis para apoio às operações da 
+						Marinha do Brasil na região, uma vez que os modelos meteoceanográficos disponíveis não possuem a resolução necessária 
+						para representar as condições locais, principalmente, próximo à costa.</h6>
+
+				<h6>Neste verão antártico de 2021/2022, os projetos ATMOS e REMObs se uniram para montar um sistema completo 
+				de monitoramento das condições de ondas e correntes na região Antártica. Ampliamos a rede de coleta de dados 
+				no “Continente Gelado”, com o lançamento de 3 boias ondógrafo de fundeio, além da coleta de dados por meio de 
+				estações oceanográficas, lançamento de boias ondógrafo de deriva e instalação de estações meteorológicas nas 
+				proximidades da Estação Antártica Comandante Ferraz. Nesta página da internet, você poderá ter acesso aos dados 
+				coletados em tempo real por nossos sistemas. </h6>
+						
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-6 mt-2">
+				<div class= "card-project text-align-center">
+					<%= image_tag "ant1.jpg"%>
+				</div>	
+			</div>			
+		</div>
 	</div>
 </div>
 <div class="tempo-real">
@@ -221,30 +259,29 @@
 
 <div class="graficos  mt-2">
 	<div class="container" id="graficos">
-		<div class='row'>
-			<div class="col-6"> 
+		<div class='row justify-content-center'>			
+		<%= form_tag root_path, method: :get, class: 'd-flex' do %>
+			<div>
+				<p  class='m-0 p-0'>Data Inicial:</p>
+				<%= date_field_tag :start_date,
+					params[:start_date],
+					class: "form-control",
+					placeholder: "Data Inicial"
+				%>
 			</div>
-			<div class="col-6"> 
-				<%= form_tag root_path, method: :get, class: 'd-flex mt-0' do %>
-					<div>
-						<p  class='m-0 p-0'>Data Inicial:</p>
-						<%= date_field_tag :start_date,
-							params[:start_date],
-							class: "form-control",
-							placeholder: "Data Inicial"
-						%>
-					</div>
-					<div>
-						<p class='m-0 p-0'>Data Final:</p>
-						<%= date_field_tag :end_date,
-							params[:end_date],
-							class: "form-control",
-							placeholder: "Data Final"
-						%>
-					</div>
-					<%= submit_tag "FILTRAR", class: "orange-button" %>
-				<% end %>
+			<div>
+				<p class='m-0 p-0'>Data Final:</p>
+				<%= date_field_tag :end_date,
+					params[:end_date],
+					class: "form-control",
+					placeholder: "Data Final"
+				%>
 			</div>
+			<div class='search' style="writing-mode: vertical-rl">
+				<%= submit_tag "FILTRAR", class: "orange-button-search" %>					
+			</div>
+		<% end %>
+			
 		</div>
 		<div id="plotdata"
 			data-almirantadoint="<%= @almirantado_int_data.to_json %>"
