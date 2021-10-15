@@ -38,14 +38,7 @@
   width: 40px;
 }
 
-.box{
-  -webkit-transition: box-shadow 0.5s, background 0.5s, color 0.5s;
-  transition: box-shadow 0.5s, background 0.5s, color 0.5s;
-  :hover {
-    background: #FEDC37;
-    color: black;
-  }
-}
+
 
 @keyframes example {
   0%   {background-color: #008CEA;}
@@ -70,9 +63,9 @@
 }
 
 .card-product img {
-  height: 100%;
-  width: 180px;
-  object-fit: cover;
+  height: 80%;
+  width: 130px;
+  object-fit: contain;
 }
 
 .card-product h3 {
@@ -97,4 +90,14 @@
 .pop-up{
   color: black;
   text-align: center !important;
+}
+
+.card-project {
+  text-align: -webkit-center;
+
+  img{
+  height: 100%;
+  width: 400px;
+  object-fit: contain;
+  }
 }
