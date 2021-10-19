@@ -89,13 +89,13 @@
 				<% @systems.each do |system| %> 			
 					<% if system.name.downcase == 'almirantado_int' %>
 						<div class="card-product mt-1 box" id='almirantado_int'>
-								<%= image_tag "spotter_blue.jpeg"%>
+								<%= image_tag "spotter_blue.jpg"%>
 					<% elsif system.name.downcase == 'almirantado_ext'  %>
 						<div class="card-product mt-1 box" id='almirantado_ext'>
-							<%= image_tag "spotter_yellow.jpeg"%>
+							<%= image_tag "spotter_yellow.jpg"%>
 					<% else %>
 						<div class="card-product mt-1 box" id='inpe'>
-              <%= image_tag "spotter_green.jpeg"%>
+              <%= image_tag "spotter_green.jpg"%>
 					<% end %>
 						<div class="card-product-infos w-100">
 							<% if system.name.downcase == 'almirantado_int' %>
