@@ -13,12 +13,22 @@
   z-index: 1000;
   color: white;
   font-family: 'Fira Sans', sans-serif;
-  
+  font-size: 16px;
+  font-weight: bold;
+ 
+
   .text {
     margin-top: 13px;
+    font-size: 100%;    
   }
+
+  
+}
+
+.nav-item {
   a {
     color: white;
+    font-size: 100%;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     -webkit-transition: border-bottom 0.75s;
@@ -37,12 +47,51 @@
   height: 50px;
   width: auto;
   margin-left: 10px;
+  .img { max-width: 100%; height: auto; }
 }
 
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-	.nav-img{
-	  width: 30px;
-	  margin-left: 5px;
-	}
+.navbar-lewagon {
+  justify-content: space-between;
 }
+
+.navbar-lewagon .navbar-collapse {
+  
+}
+
+.login-navbar {
+  flex-grow: 0;
+  margin-right: 0px; 
+}
+
+@media (min-width: 320px) { 
+  .navbar {
+    font-size:12px;
+  } 
+  .nav-img{
+    height: 30px;
+  }
+} 
+@media (min-width: 640px) { 
+  .navbar {
+    font-size:16px;
+  } 
+  .nav-img{
+    height: 40px;
+  }
+} 
+@media (min-width: 960px) { 
+  .navbar {
+    font-size:16px;
+  } 
+  .nav-img{
+    height: 50px;
+  }
+} 
+@media (min-width: 1100px) { 
+  .navbar {
+    font-size:16px;
+  } 
+  .nav-img{
+    height: 50px;
+  }
+} 

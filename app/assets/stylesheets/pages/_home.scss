@@ -2,6 +2,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Fira Sans', 'sans-serif';
+  font-size:100%; 
 }
 
 .gap {
@@ -9,6 +10,7 @@ body {
 }
 .quotes {display: none;}
 
+.img { max-width: 100%; height: auto; }
 
 // landing page styling
 .front-page {
@@ -21,15 +23,18 @@ body {
   justify-content: center;
 
   color: black;
+  .img { max-width: 100%; height: auto; }
+
   h1 {
     text-shadow: 3px 3px 0px white, -2px 1px 30px white;
     font-weight: bold;
+    font-size: 100%;
   }
 
   p {
-    font-size: 40px;
     text-shadow: 3px 3px 0px white, -2px 1px 30px white;
     font-weight: bold;
+    font-size: 100%;
   }
 
   .white-button {
@@ -54,6 +59,7 @@ body {
 
   a {
     color: white;
+    font-size: 100%;
   }
 }
 
@@ -95,6 +101,7 @@ body {
 
 .projetos {
   background-color:#F4F4F4;
+  .img { max-width: 100%; height: auto; }
   color: black;
   padding: 10px;
   h2 {
@@ -109,6 +116,7 @@ body {
   width: 100%;
   background: #008CEA;
   color: white;
+  .img { max-width: 100%; height: auto; }
 }
 
 
@@ -120,6 +128,7 @@ body {
 
   /* Set a specific height */
   height: 180px;
+  .img { max-width: 100%; height: auto; }
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -138,3 +147,91 @@ body {
     text-align: center;
   }
 }
+
+@media (max-width: 990px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+    h2 {
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 13px ;      
+    }
+
+    .card-project img{
+      width: 300px;
+    }
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+    h2 {
+      font-size: 1.6rem;
+    }
+    h6 {
+      font-size: 0.9rem;
+    }
+    p {
+      font-size: 13px ;      
+    }
+  
+    .card-project img{
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 150px;
+    h2 {
+      font-size: 1.5rem;
+    }
+    h6 {
+      font-size: 0.8rem;
+    }
+    p {
+      font-size: 13px ;      
+    }
+
+    .card-product img{
+      width: 80px;
+    }
+    .card-project img {
+      width: 100px;
+    }
+  }
+}
+
+@media (min-width: 320px) { body {font-size:1.2rem;} } 
+@media (min-width: 640px) { body {font-size:1.5rem;} } 
+@media (min-width:960px) { body {font-size:1.8rem;} } 
+@media (min-width:1100px) { body {font-size:2.0rem;} } 
+
+@media (min-width: 320px) { .orange-button {
+  font-size: 12px;
+  height: 40px;
+  width: 90px;
+} } 
+@media (min-width:1100px) { .orange-button {
+  font-size: 18px;
+  height: 60px;
+  width: 140px;
+} } 
+
+@media (min-width: 320px) { .front-page .white-button {
+  font-size: 12px;
+  height: 40px;
+  width: 90px;
+} } 
+
+@media (min-width:1100px) {.front-page .white-button {
+  font-size: 18px;
+  height: 60px;
+  width: 140px;
+} } 
+

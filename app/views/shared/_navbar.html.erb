@@ -1,13 +1,31 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-between font-weight-bold">
-  <div class="d-flex">
-    <%= image_tag "logo_pnboia.png", class: "nav-img"  %>
-    <%= image_tag "logo_remo.png", class: "nav-img"  %>    
-    <%= image_tag "logo_inpe2.png", class: "nav-img"  %>
-  </div>
-  <div class="container d-flex justify-content-right">
-    <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#projetos">PROJETOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tempo-real">DADOS EM TEMPO REAL</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#graficos">GRÁFICOS</a></span>
-  </div>
-  <div class="container d-flex justify-content-end">
-    <span class="text"><a href="#home">LOGIN</a></span>
+<div class="navbar navbar-expand-sm  navbar-lewagon font-weight-bold">
+  <a class="navbar-brand">
+    <%= link_to image_tag("logo_pnboia.png", class: "nav-img"), "https://www.marinha.mil.br/chm/dados-do-goos-brasil/pnboia-mapa", target: :_blank %>
+    <%= link_to image_tag("logo_remo.png", class: "nav-img"), "http://www.fis.ufba.br/rede-de-modelagem-e-observacao-oceanografica-remo", target: :_blank %>
+    <%= link_to image_tag("logo_inpe.png", class: "nav-img"), "https://loa-inpe.github.io/", target: :_blank %>    
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#projetos">PROJETOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tempo-real">DADOS EM TEMPO REAL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#graficos">GRÁFICOS</a>
+      </li>
+    </ul>
+  </div> 
+  <div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
+      </li>
+    </ul>
   </div>  
 </div>
