@@ -254,25 +254,31 @@
 	<div class="container" id="graficos">
 		<div class='row justify-content-center'>			
 		<%= form_tag root_path, method: :get, class: 'd-flex' do %>
-			<div>
-				<p  class='m-0 p-0'>Data Inicial:</p>
-				<%= date_field_tag :start_date,
-					params[:start_date],
-					class: "form-control",
-					placeholder: "Data Inicial"
-				%>
-			</div>
-			<div>
-				<p class='m-0 p-0'>Data Final:</p>
-				<%= date_field_tag :end_date,
-					params[:end_date],
-					class: "form-control",
-					placeholder: "Data Final"
-				%>
-			</div>
-			<div class='search' style="writing-mode: vertical-rl">
-				<%= submit_tag "FILTRAR", class: "orange-button-search" %>					
-			</div>
+      <div class="row">
+        <div class='col-12 col-md-1'>
+        </div>
+    		<div class='col-3 col-md-3'>
+    			<p  class='m-0 p-0 letter-date'>Data Inicial:</p>
+    			<%= date_field_tag :start_date,
+    				params[:start_date],
+    				class: "form-control",
+    				placeholder: "Data Inicial"
+    			%>
+    		</div>
+        <div class='col-3 col-md-3'>
+    			<p class='m-0 p-0  letter-date'>Data Final:</p>
+    			<%= date_field_tag :end_date,
+    				params[:end_date],
+    				class: "form-control",
+    				placeholder: "Data Final"
+    			%>
+    		</div>
+    		<div class='search col-3 col-md-3' style="writing-mode: vertical-rl">
+    			<%= submit_tag "FILTRAR", class: "orange-button-search" %>
+    		</div>
+        <div class='col-12 col-md-1'>
+        </div>
+      </div>
 		<% end %>
 			
 		</div>
