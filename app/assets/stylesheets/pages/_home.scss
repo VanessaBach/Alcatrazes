@@ -26,13 +26,13 @@ body {
   .img { max-width: 100%; height: auto; }
 
   h1 {
-    text-shadow: 3px 3px 0px white, -2px 1px 30px white;
+    text-shadow: 1px 2px 0px white, -2px 1px 30px white;
     font-weight: bold;
     font-size: 100%;
   }
 
   p {
-    text-shadow: 3px 3px 0px white, -2px 1px 30px white;
+    text-shadow: 2px 2px 0px white, -2px 1px 30px white;
     font-weight: bold;
     font-size: 100%;
   }
@@ -151,6 +151,10 @@ body {
 .letter-date{
   font-size: 17px;
 }
+.form-search{
+  display: flex;
+  justify-content: center;
+}
 
 @media (max-width: 990px) {
   /* For a screen < 960px, this CSS will be read */
@@ -159,12 +163,15 @@ body {
       font-size: 1.7rem;
     }
     p {
-      font-size: 13px ;      
+      font-size: 16px ;      
     }
 
     .card-project img{
       width: 300px;
     }
+  }
+  .card-product img {
+    width: 110px;
   }
 }
 @media (max-width: 720px) {
@@ -184,6 +191,13 @@ body {
       width: 200px;
     }
   }
+  .form-search{
+    display: block;
+  }  
+  .card-product img {
+    width: 100px;
+  }
+
 }
 
 @media (max-width: 320px) {
@@ -196,15 +210,20 @@ body {
       font-size: 0.8rem;
     }
     p {
-      font-size: 13px ;      
-    }
-
-    .card-product img{
-      width: 80px;
+      font-size: 16px ;      
     }
     .card-project img {
       width: 100px;
     }
+  }
+  .form-search{
+    display: block;
+  }  
+  .card-product img{
+    width: 80px;
+  }
+  .card-product-infos{
+    padding: 0px;
   }
 }
 
@@ -218,10 +237,21 @@ body {
   height: 40px;
   width: 90px;
 } } 
+@media (min-width: 640px) { .orange-button {
+  font-size: 12px;
+  height: 40px;
+  width: 90px;
+} } 
+
+@media (min-width: 960px) { .orange-button {
+  font-size: 14px;
+  height: 40px;
+  width: 90px;
+} } 
+
+
 @media (min-width:1100px) { .orange-button {
   font-size: 18px;
-  height: 60px;
-  width: 140px;
 } } 
 
 @media (min-width: 320px) { .front-page .white-button {

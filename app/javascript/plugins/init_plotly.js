@@ -73,6 +73,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
         // title: 'Tempo',
         showgrid: true,
         zeroline: false,
+        tickformat: '%d/%m %Hh',
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
@@ -94,7 +95,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
       }
     };
 
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
     Plotly.newPlot('wvdir-plot', data, layout, config);
 
@@ -151,6 +152,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
       xaxis: {
         // title: 'Tempo',
         showgrid: true,
+        tickformat: '%d/%m %Hh',
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
       },
@@ -172,11 +174,9 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
         }
       }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
     Plotly.newPlot('wdir-plot', data, layout, config);
-
-
 };
 
 const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
@@ -217,9 +217,9 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
       }
     };
 
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
-    Plotly.newPlot('wdir-plot-almirantadoint', data1, layout1);
+    Plotly.newPlot('wdir-plot-almirantadoint', data1, layout1, config);
 
     const almirantadoextWdir = {
       theta: almirantadoextData.wdirg,
@@ -256,6 +256,7 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
         }
       }
     };
+    var config = {responsive: true, displayModeBar: false }
 
     Plotly.newPlot('wdir-plot-almirantadoext', data2, layout2, config);
 
@@ -295,9 +296,9 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
       }
     };
 
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
-    Plotly.newPlot('wdir-plot-inpe', data3, layout3);
+    Plotly.newPlot('wdir-plot-inpe', data3, layout3, config);
 };
 
 
@@ -339,9 +340,9 @@ const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
       }
     };
 
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
-    Plotly.newPlot('wvdir-plot-almirantadoint', data1, layout1);
+    Plotly.newPlot('wvdir-plot-almirantadoint', data1, layout1, config);
 
     const almirantadoextWvdir = {
       theta: almirantadoextData.wvdirg,
@@ -474,6 +475,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       xaxis: {
         // title: 'Tempo',
         showgrid: true,
+        tickformat: '%d/%m %Hh',
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
       },
@@ -496,7 +498,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       }
     };
 
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
     Plotly.newPlot('wspd-plot', data, layout, config);
 
@@ -553,6 +555,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
       xaxis: {
         // title: 'Tempo',
         showgrid: true,
+        tickformat: '%d/%m %Hh',
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
       },
@@ -574,7 +577,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
         }
       }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
     Plotly.newPlot('swvht-plot', data, layout, config);
 
@@ -631,6 +634,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
       xaxis: {
         // title: 'Tempo',
         showgrid: true,
+        tickformat: '%d/%m %Hh',
         zeroline: false,
         gridcolor: 'rgba(0,0,0,0.2)'
       },
@@ -652,7 +656,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
         }
       }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false }
 
     Plotly.newPlot('sst-plot', data, layout, config);
 

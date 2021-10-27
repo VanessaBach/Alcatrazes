@@ -7,7 +7,7 @@ u = User.new(
   email: "vanessabach.r@gmail.com",
   username: "pesquisadores",
   password: "operantar",
-  admin:false
+  admin: false
 )
 u.save!
 
