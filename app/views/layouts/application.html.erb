@@ -17,8 +17,9 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <% if current_user %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
