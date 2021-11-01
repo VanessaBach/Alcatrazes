@@ -11,6 +11,7 @@ u = User.new(
 )
 u.save!
 
+
 s= System.new(
   name: "almirantado_int",
   buoy_id: 20,

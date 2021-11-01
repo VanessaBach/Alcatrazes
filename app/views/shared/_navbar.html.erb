@@ -20,12 +20,11 @@
         <a class="nav-link" href="#graficos">GRÁFICOS</a>
       </li>
       <li class="nav-item">
-        
-          <% if user_signed_in? %>
-            <%= link_to " ", destroy_user_session_path, method: :delete, class: "nav-link fas fa-sign-out-alt " %>
-          <% end %>
-        </a>
-      </li>
+        <%= link_to interno_path, class: "nav-link d-flex align-items-center", target: :_blank do %>
+          <i class="fas fa-sign-out-alt"></i>
+          <div>INTERNO</div>
+        <% end %>
+      </li>        
     </ul>
   </div>
 </div>

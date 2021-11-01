@@ -173,6 +173,24 @@ body {
   .card-product img {
     width: 110px;
   }
+  .orange-button-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    height: 40px;
+    width: 120px;
+    font-weight: bold;
+    background-color: #3FAEFD;
+    border-radius: 5px;
+    float:right;
+    -webkit-transition: background-color 0.75s, color 0.75s;
+    transition: background-color 0.75s, color 0.75s;
+    &:hover {
+      background-color: #FEDC37;
+    }
+  }
+
 }
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
@@ -196,6 +214,23 @@ body {
   }  
   .card-product img {
     width: 100px;
+  }
+  .orange-button-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    background-color: #3FAEFD;
+    border-radius: 5px;
+    float:right;
+    -webkit-transition: background-color 0.75s, color 0.75s;
+    transition: background-color 0.75s, color 0.75s;
+    &:hover {
+      background-color: #FEDC37;
+    }
   }
 
 }
@@ -225,6 +260,24 @@ body {
   .card-product-infos{
     padding: 0px;
   }
+  .orange-button-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    background-color: #3FAEFD;
+    border-radius: 5px;
+    float:right;
+    -webkit-transition: background-color 0.75s, color 0.75s;
+    transition: background-color 0.75s, color 0.75s;
+    &:hover {
+      background-color: #FEDC37;
+    }
+  }
+
 }
 
 @media (min-width: 320px) { body {font-size:1.2rem;} } 

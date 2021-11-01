@@ -26,7 +26,7 @@
 }
 
 .nav-item {
-  a {
+  a, div {
     color: white !important;;
     font-size: 100%;
     text-decoration: none;
@@ -37,12 +37,10 @@
       border-bottom: 1px solid #3FAEFD;
     }
   }
-  i{
-    text-decoration: none !important;
-    :hover {
-      text-decoration: none !important;
-    }
-  }
+
+}
+.nav-link{
+  padding: 0rem;  
 }
 
 .nav-bg {
