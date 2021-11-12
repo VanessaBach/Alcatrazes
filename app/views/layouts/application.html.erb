@@ -2,9 +2,19 @@
 <html>
   <head>
     <title>Boias - Antártica</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag asset_path('favicon.png') %>
+    <%= favicon_link_tag asset_path('favicon2.png') %>
+
+    <meta name="description" content="Dados meteoceanográficos em tempo real na Antártica">
+    <meta property="og:title" content="Boias - Antártica" />
+    <meta property="og:url" content="http://www.operantar.live/" />
+    <meta property="og:description" content="Dados meteoceanográficos em tempo real na Antártica">
+    <meta property="og:image" content="<%= image_url ('meta_image.png') %>">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
