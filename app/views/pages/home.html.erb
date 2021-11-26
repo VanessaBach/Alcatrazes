@@ -98,6 +98,7 @@
 								<% if @almirantado_int_data == {} %>
 									<p  class='text-center'><strong>BOIA SEM DADOS</strong></p>
 								<% else %>
+									<p  class='text-center'><strong>ÚLTIMO DADO:</strong> <%= @almirantado_int_data[:date_time][-1].strftime('%Y/%m/%d %H:%M')%></p>
 									<div class="row">
 										<div class="col-6 text-center">
 											<% if @almirantado_int_data[:swvht][-1] %>
