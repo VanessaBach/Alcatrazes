@@ -1,0 +1,23 @@
+<div class='results'>
+    <h2 class='text-center p-2'>ESTAÇÕES</h2>
+    <% @systems.each do |system| %>
+        <div class="d-flex">
+            <%= simple_form_for system, html: { class: "results d-flex"} do |f| %>           
+                <%= f.input :name, label: 'NOME' %>
+                <%= f.input :buoy_id, label: 'ID BOIA' %>
+                <%= f.input :lat, label: 'LAT' %>
+                <%= f.input :lon, label: 'LON' %>
+                <%= f.button :submit, "ALTERAR", class: "btn btn-outline-success m-1"%>
+            <% end %>
+            <%= link_to "APAGAR", system_path(system), method: :delete, data: { confirm: "Tem certeza?" }, class: "btn btn-outline-danger m-1" %>
+        </div>
+    <% end %>
+    <%= simple_form_for @system, html: { class: "results d-flex"} do |f| %>
+        <%= f.input :name, label: 'NOME' %>
+        <%= f.input :buoy_id, label: 'ID BOIA' %>
+        <%= f.input :lat, label: 'LAT' %>
+        <%= f.input :lon, label: 'LON' %>
+        <%= f.button :submit, "NOVA ESTAÇÃO", class: "btn btn-outline-danger m-1"%>
+    <% end %>
+</div>
+<%= link_to "PÁGINA INICIAL", root_path, class: "btn btn-outline-primary m-1" %>

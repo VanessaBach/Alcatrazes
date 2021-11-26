@@ -2,10 +2,12 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def admin
-    @systems = System.all
-  end
-
-  def internal
+    if current_user.admin
+      @systems = System.all
+      @system = System.new
+    else
+      redirect_to root_path
+    end
   end
 
   def home
