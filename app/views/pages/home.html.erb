@@ -95,7 +95,7 @@
 						<div class="card-product-infos w-100">
 							<% if system.name.downcase == 'almirantado_int' %>
 								<h3 class='text-center'>KELLER</h3>
-								<% if @almirantado_int_data == {} %>
+								<% if @almirantado_int_data == {} || @almirantado_int_data[:date_time] == [] %>
 									<p  class='text-center'><strong>BOIA SEM DADOS</strong></p>
 								<% else %>
 									<p  class='text-center'><strong>ÚLTIMO DADO:</strong> <%= @almirantado_int_data[:date_time][-1].strftime('%Y/%m/%d %H:%M')%></p>
@@ -147,7 +147,7 @@
 								<% end %>
 							<% elsif system.name.downcase == 'almirantado_ext' %>
 								<h3 class='text-center'>ALMIRANTADO</h3>
-								<% if @almirantado_ext_data == {} %>
+								<% if @almirantado_ext_data == {}  || @almirantado_ext_data[:date_time] == [] %>
 									<p  class='text-center'><strong>BOIA SEM DADOS</strong></p>
 								<% else %>
 									<p  class='text-center'><strong>ÚLTIMO DADO:</strong> <%= @almirantado_ext_data[:date_time][-1].strftime('%Y/%m/%d %H:%M')%></p>
@@ -199,7 +199,7 @@
 								<% end %>
 							<% else %>
 								<h3 class='text-center'>PINGUIM</h3>
-								<% if @inpe_data == {} %>
+								<% if @inpe_data == {}  || @inpe_data[:date_time] == []  %>
 									<p  class='text-center'><strong>BOIA SEM DADOS</strong></p>
 								<% else %>
 									<p class='text-center'><strong>ÚLTIMO DADO:</strong> <%= @inpe_data[:date_time][-1].strftime('%Y/%m/%d %H:%M')%></p>

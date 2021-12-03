@@ -37,7 +37,7 @@ const initMapbox = () => {
 				almirantado_int.style.backgroundSize = 'contain';
 				almirantado_int.style.width = '50px';
 				almirantado_int.style.height = '38px';
-				if (JSON.stringify(almirantado_intData) === '{}') {
+				if (JSON.stringify(almirantado_intData) === '{}' || almirantado_intData.date_time.length === 0) {
 					const markerAlmirantadoInt = new mapboxgl.Marker(almirantado_int)
 					.setLngLat([ marker.lon, marker.lat ])
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
@@ -72,7 +72,7 @@ const initMapbox = () => {
 				almirantado_ext.style.backgroundSize = 'contain';
 				almirantado_ext.style.width = '50px';
 				almirantado_ext.style.height = '38px';
-				if (JSON.stringify(almirantado_extData) === '{}') {
+				if (JSON.stringify(almirantado_extData) === '{}'  || almirantado_extData.date_time.length === 0) {
 					const markerAlmirantadoExt = new mapboxgl.Marker(almirantado_ext)
 					.setLngLat([ marker.lon, marker.lat ])
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
@@ -107,7 +107,7 @@ const initMapbox = () => {
 				inpe.style.backgroundSize = 'contain';
 				inpe.style.width = '50px';
 				inpe.style.height = '38px';
-				if (JSON.stringify(inpeData) === '{}') {
+				if (JSON.stringify(inpeData) === '{}'  || inpeData.date_time.length === 0) {
 					const markerInpe = new mapboxgl.Marker(inpe)
 					.setLngLat([ marker.lon, marker.lat ])
 					.setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
