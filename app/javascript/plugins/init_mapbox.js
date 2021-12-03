@@ -54,10 +54,10 @@ const initMapbox = () => {
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
 			          <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
 			          <p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lon*100)/100}, <strong>LON:</strong> ${Math.round(marker.lat*100)/100}</p>
-			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_intData.date_time[almirantado_intData.date_time.length -1].slice(0,10)}</p>
-			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_intData.date_time[almirantado_intData.date_time.length -1].slice(11,16)}</p>
-			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_intData.swvht[almirantado_intData.date_time.length -1]} m</p>
-			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_intData.wspd[almirantado_intData.date_time.length -1]} nós</p></div>`))
+			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_intData.date_time[0].slice(0,10)}</p>
+			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_intData.date_time[0].slice(11,16)}</p>
+			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_intData.swvht[0]} m</p>
+			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_intData.wspd[0]} nós</p></div>`))
 					.addTo(map);
 					markerAlmirantadoInt.getElement().addEventListener('click', () => {
 						almirantadoIntCard.classList.remove('card-animation');
@@ -89,10 +89,10 @@ const initMapbox = () => {
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
 			          <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
 			          <p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lon*100)/100}, <strong>LON:</strong> ${Math.round(marker.lat*100)/100}</p>
-			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_extData.date_time[almirantado_extData.date_time.length -1].slice(0,10)}</p>
-			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_extData.date_time[almirantado_extData.date_time.length -1].slice(11,16)}</p>
-			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_extData.swvht[almirantado_extData.date_time.length -1]} m</p>
-			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_extData.wspd[almirantado_extData.date_time.length -1]} nós</p></div>`))
+			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_extData.date_time[0].slice(0,10)}</p>
+			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_extData.date_time[0].slice(11,16)}</p>
+			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_extData.swvht[0]} m</p>
+			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_extData.wspd[0]} nós</p></div>`))
 					.addTo(map);
 					markerAlmirantadoExt.getElement().addEventListener('click', () => {
 						almirantadoExtCard.classList.remove('card-animation');
@@ -124,10 +124,10 @@ const initMapbox = () => {
 					.setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
 			        	<h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
 	          			<p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lon*100)/100}, <strong>LON:</strong> ${Math.round(marker.lat*100)/100}</p>
-						<p class='m-0 p-0'><strong>DATA:</strong> ${inpeData.date_time[inpeData.date_time.length -1].slice(0,10)}</p>
-	         			<p class='m-0 p-0'><strong>HORA:</strong> ${inpeData.date_time[inpeData.date_time.length -1].slice(11,16)}</p>
-						<p class='m-0 p-0'><strong>Altura Onda:</strong> ${inpeData.swvht[inpeData.date_time.length -1]} m</p>
-						<p class='m-0 p-0'><strong>Vel. Vento:</strong> ${inpeData.wspd[inpeData.date_time.length -1]} nós</p></div>`))
+						<p class='m-0 p-0'><strong>DATA:</strong> ${inpeData.date_time[0].slice(0,10)}</p>
+	         			<p class='m-0 p-0'><strong>HORA:</strong> ${inpeData.date_time[0].slice(11,16)}</p>
+						<p class='m-0 p-0'><strong>Altura Onda:</strong> ${inpeData.swvht[0]} m</p>
+						<p class='m-0 p-0'><strong>Vel. Vento:</strong> ${inpeData.wspd[0]} nós</p></div>`))
 					.addTo(map);
 					markerInpe.getElement().addEventListener('click', () => {
 						inpeCard.classList.remove('card-animation');
