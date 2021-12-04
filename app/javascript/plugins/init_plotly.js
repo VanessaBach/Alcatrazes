@@ -16,6 +16,7 @@ const initPlotly = () => {
     plotSwvht(almirantadointData, almirantadoextData, inpeData);
     plotWvdirg(almirantadointData, almirantadoextData, inpeData);
     plotWvdir(almirantadointData, almirantadoextData, inpeData);
+    plotTp(almirantadointData, almirantadoextData, inpeData);
     plotSst(almirantadointData, almirantadoextData, inpeData);
 
   }
@@ -582,6 +583,86 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
     Plotly.newPlot('swvht-plot', data, layout, config);
 
 };
+
+const plotTp = (almirantadointData, almirantadoextData, inpeData) => {
+
+  const almirantadointtp = {
+    x: almirantadointData.date_time,
+    y: almirantadointData.tp,
+    mode: 'lines+markers',
+    name: 'KELLER',
+    line: {
+      color: '#c22d45',
+      width: 2
+    }
+  };
+
+  const almirantadoexttp = {
+    x: almirantadoextData.date_time,
+    y: almirantadoextData.tp,
+    mode: 'lines+markers',
+    name: 'ALMIRANTADO',
+    line: {
+      color: '#2f42ad',
+      width: 2
+    }
+  };
+
+  const inpetp = {
+    x: inpeData.date_time,
+    y: inpeData.tp,
+    mode: 'lines+markers',
+    name: 'PINGUIM',
+    line: {
+      color: '#486641',
+      width: 2,
+    }
+  };
+
+
+  const data = [almirantadointtp, almirantadoexttp,inpetp];
+
+  var layout = {
+    title: {
+      text: 'PERÍODO DE PICO DE ONDA',
+      font: {
+        family: 'Fira Sans, sans-serif',
+        size: 24
+      },
+    },
+    plot_bgcolor:"rgba(0,0,0,0)",
+    paper_bgcolor:"rgba(0,0,0,0)",
+    xaxis: {
+      // title: 'Tempo',
+      showgrid: true,
+      tickformat: '%d/%m %Hh',
+      zeroline: false,
+      gridcolor: 'rgba(0,0,0,0.2)'
+    },
+    yaxis: {
+      title: 'Período (s)',
+      showgrid: true,
+      showline: true,
+      gridcolor: 'rgba(0,0,0,0.2)'
+    },
+    showlegend: true,
+    legend:{"orientation": "h",
+      x: 0,
+      y: -0.2,
+      traceorder: 'normal',
+      font: {
+        family: 'sans-serif',
+        size: 10,
+        color: '#000'
+      }
+    }
+  };
+  var config = {responsive: true, displayModeBar: false }
+
+  Plotly.newPlot('tp-plot', data, layout, config);
+
+};
+
 
 const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
 
