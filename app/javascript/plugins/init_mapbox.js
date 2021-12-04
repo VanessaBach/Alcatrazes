@@ -41,7 +41,7 @@ const initMapbox = () => {
 					const markerAlmirantadoInt = new mapboxgl.Marker(almirantado_int)
 					.setLngLat([ marker.lon, marker.lat ])
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
-			          <h3 class='m-0 p-0'><strong>SEM DADOS</strong></h3></div>`))
+			          <h3 class='m-0 p-0'><strong>A SER LANÇADA</strong></h3></div>`))
 					.addTo(map);
 					markerAlmirantadoInt.getElement().addEventListener('click', () => {
 						almirantadoIntCard.classList.remove('card-animation');
@@ -53,7 +53,7 @@ const initMapbox = () => {
 					.setLngLat([ marker.lon, marker.lat ])
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
 			          <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
-			          <p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lon*100)/100}, <strong>LON:</strong> ${Math.round(marker.lat*100)/100}</p>
+			          <p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lat*100)/100}, <strong>LON:</strong> ${Math.round(marker.lon*100)/100}</p>
 			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_intData.date_time[0].slice(0,10)}</p>
 			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_intData.date_time[0].slice(11,16)}</p>
 			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_intData.swvht[0]} m</p>
@@ -76,7 +76,7 @@ const initMapbox = () => {
 					const markerAlmirantadoExt = new mapboxgl.Marker(almirantado_ext)
 					.setLngLat([ marker.lon, marker.lat ])
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
-			          <h3 class='m-0 p-0'><strong>SEM DADOS</strong></h3></div>`))
+			          <h3 class='m-0 p-0'><strong>A SER LANÇADA</strong></h3></div>`))
 					.addTo(map);
 					markerAlmirantadoExt.getElement().addEventListener('click', () => {
 						almirantadoExtCard.classList.remove('card-animation');
@@ -88,7 +88,7 @@ const initMapbox = () => {
 					.setLngLat([ marker.lon, marker.lat ])
 			        .setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
 			          <h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
-			          <p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lon*100)/100}, <strong>LON:</strong> ${Math.round(marker.lat*100)/100}</p>
+			          <p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lat*100)/100}, <strong>LON:</strong> ${Math.round(marker.lon*100)/100}</p>
 			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_extData.date_time[0].slice(0,10)}</p>
 			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_extData.date_time[0].slice(11,16)}</p>
 			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_extData.swvht[0]} m</p>
@@ -111,7 +111,7 @@ const initMapbox = () => {
 					const markerInpe = new mapboxgl.Marker(inpe)
 					.setLngLat([ marker.lon, marker.lat ])
 					.setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
-			        	<h3 class='m-0 p-0'><strong>SEM DADOS</strong></h3></div>`))
+			        	<h3 class='m-0 p-0'><strong>A SER LANÇADA</strong></h3></div>`))
 					.addTo(map);
 					markerInpe.getElement().addEventListener('click', () => {
 						inpeCard.classList.remove('card-animation');
@@ -123,7 +123,7 @@ const initMapbox = () => {
 					.setLngLat([ marker.lon, marker.lat ])
 					.setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
 			        	<h3 class='m-0 p-0'><strong>OPERATIVA</strong></h3>
-	          			<p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lon*100)/100}, <strong>LON:</strong> ${Math.round(marker.lat*100)/100}</p>
+	          			<p class='m-0 p-0'><strong>LAT:</strong> ${Math.round(marker.lat*100)/100}, <strong>LON:</strong> ${Math.round(marker.lon*100)/100}</p>
 						<p class='m-0 p-0'><strong>DATA:</strong> ${inpeData.date_time[0].slice(0,10)}</p>
 	         			<p class='m-0 p-0'><strong>HORA:</strong> ${inpeData.date_time[0].slice(11,16)}</p>
 						<p class='m-0 p-0'><strong>Altura Onda:</strong> ${inpeData.swvht[0]} m</p>
