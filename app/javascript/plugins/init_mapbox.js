@@ -57,7 +57,7 @@ const initMapbox = () => {
 			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_intData.date_time[0].slice(0,10)}</p>
 			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_intData.date_time[0].slice(11,16)}</p>
 			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_intData.swvht[0]} m</p>
-			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_intData.wspd[0]} nós</p></div>`))
+			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_intData.wspd[0]} m/s</p></div>`))
 					.addTo(map);
 					markerAlmirantadoInt.getElement().addEventListener('click', () => {
 						almirantadoIntCard.classList.remove('card-animation');
@@ -92,7 +92,7 @@ const initMapbox = () => {
 			          <p class='m-0 p-0'><strong>DATA:</strong> ${almirantado_extData.date_time[0].slice(0,10)}</p>
 			          <p class='m-0 p-0'><strong>HORA:</strong> ${almirantado_extData.date_time[0].slice(11,16)}</p>
 			          <p class='m-0 p-0'><strong>Altura Onda:</strong> ${almirantado_extData.swvht[0]} m</p>
-			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_extData.wspd[0]} nós</p></div>`))
+			          <p class='m-0 p-0'><strong>Vel. Vento:</strong> ${almirantado_extData.wspd[0]} m/s</p></div>`))
 					.addTo(map);
 					markerAlmirantadoExt.getElement().addEventListener('click', () => {
 						almirantadoExtCard.classList.remove('card-animation');
@@ -127,7 +127,7 @@ const initMapbox = () => {
 						<p class='m-0 p-0'><strong>DATA:</strong> ${inpeData.date_time[0].slice(0,10)}</p>
 	         			<p class='m-0 p-0'><strong>HORA:</strong> ${inpeData.date_time[0].slice(11,16)}</p>
 						<p class='m-0 p-0'><strong>Altura Onda:</strong> ${inpeData.swvht[0]} m</p>
-						<p class='m-0 p-0'><strong>Vel. Vento:</strong> ${inpeData.wspd[0]} nós</p></div>`))
+						<p class='m-0 p-0'><strong>Vel. Vento:</strong> ${inpeData.wspd[0]} m/s</p></div>`))
 					.addTo(map);
 					markerInpe.getElement().addEventListener('click', () => {
 						inpeCard.classList.remove('card-animation');
