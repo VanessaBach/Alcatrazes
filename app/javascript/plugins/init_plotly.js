@@ -39,7 +39,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.wvdir,
       mode: 'lines+markers',
-      name: 'ALMIRANTADO',
+      name: 'POTTER',
       line: {
         color: '#2f42ad',
         width: 2
@@ -120,7 +120,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.wdir,
       mode: 'lines+markers',
-      name: 'ALMIRANTADO',
+      name: 'POTTER',
       line: {
         color: '#2f42ad',
         width: 2
@@ -236,7 +236,7 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
 
     var layout2 = {
       title: {
-        text: 'ALMIRANTADO',
+        text: 'POTTER',
         font: {
           family: 'Fira Sans, sans-serif',
           size: 18
@@ -359,7 +359,7 @@ const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
 
     var layout2 = {
       title: {
-        text: 'ALMIRANTADO',
+        text: 'POTTER',
         font: {
           family: 'Fira Sans, sans-serif',
           size: 18
@@ -442,7 +442,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.wspd,
       mode: 'lines+markers',
-      name: 'ALMIRANTADO',
+      name: 'POTTER',
       line: {
         color: '#2f42ad',
         width: 2
@@ -522,7 +522,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.swvht,
       mode: 'lines+markers',
-      name: 'ALMIRANTADO',
+      name: 'POTTER',
       line: {
         color: '#2f42ad',
         width: 2
@@ -601,7 +601,7 @@ const plotTp = (almirantadointData, almirantadoextData, inpeData) => {
     x: almirantadoextData.date_time,
     y: almirantadoextData.tp,
     mode: 'lines+markers',
-    name: 'ALMIRANTADO',
+    name: 'POTTER',
     line: {
       color: '#2f42ad',
       width: 2
@@ -681,7 +681,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
       x: almirantadoextData.date_time,
       y: almirantadoextData.sst,
       mode: 'lines+markers',
-      name: 'ALMIRANTADO',
+      name: 'POTTER',
       line: {
         color: '#2f42ad',
         width: 2
