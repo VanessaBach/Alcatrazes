@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { initMapbox } from '../plugins/init_mapbox';
+import { initMapbox, initMapboxDrifter } from '../plugins/init_mapbox';
 import { initPlotly } from '../plugins/init_plotly';
 
 // Internal imports, e.g:
@@ -36,6 +36,7 @@ import { initQuotes } from '../components/quotes';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initMapboxDrifter();
   initPlotly();
   initSmooth();
   initUpdateNavbarOnScroll();

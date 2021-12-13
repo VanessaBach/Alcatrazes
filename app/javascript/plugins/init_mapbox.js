@@ -143,4 +143,42 @@ const initMapbox = () => {
 	}
 };
 
-export { initMapbox };
+const initMapboxDrifter = () => {
+
+	const fitMapToMarkers = (map, markers) => {
+		const bounds = new mapboxgl.LngLatBounds();
+		markers.forEach(marker => bounds.extend([ marker.lon, marker.lat ]));
+		map.fitBounds(bounds, { padding: 70, maxZoom: 8, duration: 0 });
+	};
+  
+	const mapElement = document.getElementById('map_drifter');
+
+	if (mapElement) { // only build a map if there's a div#map to inject into
+		mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+		const map = new mapboxgl.Map({
+			container: 'map_drifter',
+			style: 'mapbox://styles/mapbox/outdoors-v11'
+		});
+
+		const markers = JSON.parse(mapElement.dataset.markers);
+
+		console.log(markers)
+
+
+		const almirantado_extData = JSON.parse(mapElement.dataset.almirantadoext);
+
+		almirantado_extData.forEach((marker) => {
+			const markerAlmirantadoInt = new mapboxgl.Marker()
+					.setLngLat([ marker[2], marker[1]])
+					.setPopup(new mapboxgl.Popup().setHTML(`<div class='pop-up'>
+						<p class='m-0 p-0'><strong>LAT:</strong> ${marker[1]}, <strong>LON:</strong> ${marker[2]}</p>
+						<p class='m-0 p-0'><strong>DATA:</strong> ${marker[3].slice(0,10)}</p>
+						<p class='m-0 p-0'><strong>HORA:</strong> ${marker[3].slice(11,16)}</p>
+						</div>`))
+					.addTo(map);
+		});
+		fitMapToMarkers(map, markers);
+	}
+};
+
+export { initMapbox, initMapboxDrifter };

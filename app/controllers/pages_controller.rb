@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :position]
 
   def admin
     if current_user.admin
@@ -9,6 +9,15 @@ class PagesController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def position
+    @almirantado_ext_data = get_drifter(@almirantado_ext)
+    @almirantado_int = System.where("name ='almirantado_int' ") [0]
+    @almirantado_ext = System.where("name ='almirantado_ext' ") [0]
+    @inpe = System.where("name ='inpe' ") [0]
+    @systems = [@almirantado_int, @almirantado_ext, @inpe]
+
+  end  
 
   def home
     if params[:commit]
@@ -45,6 +54,20 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def get_drifter(buoy)
+    response = RestClient.get("https://api.sofarocean.com/api/latest-data?spotterId=SPOT-1442&token=#{ENV["IN_TOKEN"]}")
+      
+    remobs_response = JSON.parse(response)
+    remobs_response = remobs_response['data']['track']
+
+    params = []
+
+    remobs_response.each do |item|
+      params << [25, (item['latitude']), (item['longitude']), Time.parse(item['timestamp'])]
+    end
+    return params
+  end
 
   def get_remobs(buoy, start_date, end_date)
     if buoy.buoy_id
