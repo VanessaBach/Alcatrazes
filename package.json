@@ -1,0 +1,27 @@
+{
+  "name": "antarctic_buoys",
+  "private": true,
+  "engines": {
+    "node": "14.15.0"
+  },
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0-alpha",
+    "@rails/activestorage": "^6.0.0-alpha",
+    "@rails/ujs": "^6.0.0-alpha",
+    "@rails/webpacker": "4.3.0",
+    "bootstrap": "4.6",
+    "chart.js": "^3.5.1",
+    "flag-icons": "^6.0.3",
+    "jquery": "^3.6.0",
+    "mapbox-gl": "^2.4.1",
+    "node-sass": "^7.0.1",
+    "plotly.js-dist": "^2.5.1",
+    "popper.js": "^1.16.1",
+    "turbolinks": "^5.2.0",
+    "typed.js": "^2.0.12"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^4.2.0"
+  }
+}
