@@ -1,14 +1,11 @@
 {
   "name": "antarctic_buoys",
   "private": true,
-  "engines": {
-    "node": "14.x"
-  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "4.3.0",
+    "@rails/webpacker": "5.4.3",
     "bootstrap": "4.6",
     "chart.js": "^3.5.1",
     "flag-icons": "^6.0.3",
