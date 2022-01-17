@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "admin", to: "pages#admin"
   get "position", to: "pages#position"
+  get "english", to: "pages#english"
 
   resources :systems
 

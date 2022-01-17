@@ -9,20 +9,21 @@ const initPlotly = () => {
     const almirantadointData = JSON.parse(chartElement.dataset.almirantadoint);
     const almirantadoextData = JSON.parse(chartElement.dataset.almirantadoext);
     const inpeData = JSON.parse(chartElement.dataset.inpe);
+    const language = chartElement.dataset.language;
 
-    plotWspd(almirantadointData, almirantadoextData, inpeData);
-    plotWdir(almirantadointData, almirantadoextData, inpeData);
-    plotWdirg(almirantadointData, almirantadoextData, inpeData);
-    plotSwvht(almirantadointData, almirantadoextData, inpeData);
-    plotWvdirg(almirantadointData, almirantadoextData, inpeData);
-    plotWvdir(almirantadointData, almirantadoextData, inpeData);
-    plotTp(almirantadointData, almirantadoextData, inpeData);
-    plotSst(almirantadointData, almirantadoextData, inpeData);
+    plotWspd(almirantadointData, almirantadoextData, inpeData, language);
+    plotWdir(almirantadointData, almirantadoextData, inpeData, language);
+    plotWdirg(almirantadointData, almirantadoextData, inpeData, language);
+    plotSwvht(almirantadointData, almirantadoextData, inpeData, language);
+    plotWvdirg(almirantadointData, almirantadoextData, inpeData, language);
+    plotWvdir(almirantadointData, almirantadoextData, inpeData, language);
+    plotTp(almirantadointData, almirantadoextData, inpeData, language);
+    plotSst(almirantadointData, almirantadoextData, inpeData, language);
 
   }
 };
 
-const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
+const plotWvdir = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointWvdir = {
       x: almirantadointData.date_time,
@@ -60,9 +61,17 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
 
     const data = [almirantadointWvdir, almirantadoextWvdir, inpeWvdir];
 
+
+    let text = 'DIR. ONDAS'
+    let title = 'Dir. ondas (°)'
+    if (language === 'english') {
+      text = "WAVE DIR."
+      title = 'Wave Dir. (°)'
+    }
+
     var layout = {
       title: {
-        text: 'DIR. ONDAS',
+        text: text,
         font: {
           family: 'Fira Sans, sans-serif',
           size: 24
@@ -78,7 +87,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Dir. ondas (°)',
+        title: title,
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -103,7 +112,7 @@ const plotWvdir = (almirantadointData, almirantadoextData, inpeData) => {
 
 };
 
-const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
+const plotWdir = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointWdir = {
       x: almirantadointData.date_time,
@@ -140,9 +149,17 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
 
     const data = [almirantadointWdir, almirantadoextWdir, inpeWdir];
 
+    let text = 'DIR. VENTO'
+    let title = 'Direção do Vento (°)'
+    if (language === 'english') {
+      text = "WIND DIR."
+      title = 'Wind Direction (°)'
+    }
+
+
     var layout = {
       title: {
-        text: 'DIR. VENTO',
+        text: text,
         font: {
           family: 'Fira Sans, sans-serif',
           size: 24
@@ -158,7 +175,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Direção do Vento (°)',
+        title: title,
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -180,7 +197,7 @@ const plotWdir = (almirantadointData, almirantadoextData, inpeData) => {
     Plotly.newPlot('wdir-plot', data, layout, config);
 };
 
-const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
+const plotWdirg = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointWdir = {
       theta: almirantadointData.wdirg,
@@ -303,7 +320,7 @@ const plotWdirg = (almirantadointData, almirantadoextData, inpeData) => {
 };
 
 
-const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
+const plotWvdirg = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointWvdir = {
       theta: almirantadointData.wvdirg,
@@ -425,7 +442,7 @@ const plotWvdirg = (almirantadointData, almirantadoextData, inpeData) => {
 };
 
 
-const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
+const plotWspd = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointWspd = {
       x: almirantadointData.date_time,
@@ -463,9 +480,17 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
 
     const data = [almirantadointWspd, almirantadoextWspd, inpeWspd];
 
+    let text = 'VELOCIDADE DO VENTO'
+    let title = 'Veloc Vento (m/s)'
+    if (language === 'english') {
+      text = "WIND VELOCITY"
+      title = 'Wind Velocity (m/s)'
+    }
+
+
     var layout = {
       title: {
-        text: 'VELOCIDADE DO VENTO',
+        text: text,
         font: {
           family: 'Fira Sans, sans-serif',
           size: 24
@@ -481,7 +506,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Veloc. Vento (m/s)',
+        title: title,
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -505,7 +530,7 @@ const plotWspd = (almirantadointData, almirantadoextData, inpeData) => {
 
 };
 
-const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
+const plotSwvht = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointSwvht = {
       x: almirantadointData.date_time,
@@ -543,9 +568,16 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
 
     const data = [almirantadointSwvht, almirantadoextSwvht, inpeSwvht];
 
+    let text = 'ALTURA SIG. ONDA'
+    let title = 'Altura de Onda (m)'
+    if (language === 'english') {
+      text = "SIG. WAVE HEIGHT"
+      title = 'Wave Height (m)'
+    }
+
     var layout = {
       title: {
-        text: ' ALTURA SIG. ONDA',
+        text: text,
         font: {
           family: 'Fira Sans, sans-serif',
           size: 24
@@ -561,7 +593,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Altura de Onda (m)',
+        title: title,
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
@@ -584,7 +616,7 @@ const plotSwvht = (almirantadointData, almirantadoextData, inpeData) => {
 
 };
 
-const plotTp = (almirantadointData, almirantadoextData, inpeData) => {
+const plotTp = (almirantadointData, almirantadoextData, inpeData, language) => {
 
   const almirantadointtp = {
     x: almirantadointData.date_time,
@@ -622,9 +654,17 @@ const plotTp = (almirantadointData, almirantadoextData, inpeData) => {
 
   const data = [almirantadointtp, almirantadoexttp,inpetp];
 
+  let text = 'PERÍODO DE PICO DE ONDA'
+  let title = 'Período (s)'
+  if (language === 'english') {
+    text = "WAVE PEAK PERIOD"
+    title = 'Period (s)'
+  }
+
+
   var layout = {
     title: {
-      text: 'PERÍODO DE PICO DE ONDA',
+      text: text,
       font: {
         family: 'Fira Sans, sans-serif',
         size: 24
@@ -640,7 +680,7 @@ const plotTp = (almirantadointData, almirantadoextData, inpeData) => {
       gridcolor: 'rgba(0,0,0,0.2)'
     },
     yaxis: {
-      title: 'Período (s)',
+      title: title,
       showgrid: true,
       showline: true,
       gridcolor: 'rgba(0,0,0,0.2)'
@@ -664,7 +704,7 @@ const plotTp = (almirantadointData, almirantadoextData, inpeData) => {
 };
 
 
-const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
+const plotSst = (almirantadointData, almirantadoextData, inpeData, language) => {
 
     const almirantadointSst = {
       x: almirantadointData.date_time,
@@ -702,9 +742,16 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
 
     const data = [almirantadointSst, almirantadoextSst,inpeSst];
 
+    let text = 'TEMP. ÁGUA DO MAR'
+    let title = 'Temperatura (°C)'
+    if (language === 'english') {
+      text = "SEA SURFACE TEMPERATURE"
+      title = 'Temperature (°C)'
+    }
+
     var layout = {
       title: {
-        text: 'TEMP. ÁGUA DO MAR',
+        text: text,
         font: {
           family: 'Fira Sans, sans-serif',
           size: 24
@@ -720,7 +767,7 @@ const plotSst = (almirantadointData, almirantadoextData, inpeData) => {
         gridcolor: 'rgba(0,0,0,0.2)'
       },
       yaxis: {
-        title: 'Temperatura (°C)',
+        title: title,
         showgrid: true,
         showline: true,
         gridcolor: 'rgba(0,0,0,0.2)'
