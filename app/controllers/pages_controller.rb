@@ -46,7 +46,7 @@ class PagesController < ApplicationController
   private
 
   def get_drifter(buoy)
-    response = RestClient.get("https://api.sofarocean.com/api/latest-data?spotterId=SPOT-1442&token=#{ENV["IN_TOKEN"]}")
+    response = RestClient.get("https://api.sofarocean.com/api/latest-data?spotterId=SPOT-1565&token=#{ENV["IN_TOKEN"]}")
       
     remobs_response = JSON.parse(response)
     remobs_response = remobs_response['data']['track']
