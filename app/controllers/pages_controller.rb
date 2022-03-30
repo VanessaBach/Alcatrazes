@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :position, :english]
+  skip_before_action :authenticate_user!, only: [:home, :position]
 
   def admin
     if current_user.admin
@@ -11,12 +11,8 @@ class PagesController < ApplicationController
   end
 
   def position
-    @almirantado_ext_data = get_drifter(@almirantado_ext)
-    @almirantado_int = System.where("name ='almirantado_int' ") [0]
-    @almirantado_ext = System.where("name ='almirantado_ext' ") [0]
-    @inpe = System.where("name ='inpe' ") [0]
-    @systems = [@almirantado_int, @almirantado_ext, @inpe]
-
+    @almirantado_int_data = get_drifter(@almirantado_int)
+    @almirantado_int = System.where("name ='almirantado_int' ") [0]    
   end  
 
   def home
@@ -42,53 +38,10 @@ class PagesController < ApplicationController
       end_date = Time.now + 1.day
     end
 
-    @almirantado_int = System.where("name ='almirantado_int' ") [0]
-    @almirantado_ext = System.where("name ='almirantado_ext' ") [0]
-    @inpe = System.where("name ='inpe' ") [0]
-
+    @almirantado_int = System.where("name ='almirantado_int' ") [0]    
     @almirantado_int_data = get_remobs(@almirantado_int, start_date, end_date)
-    @almirantado_ext_data = get_remobs(@almirantado_ext, start_date, end_date)
-    @inpe_data = get_remobs(@inpe, start_date, end_date)
-
-    @systems = [@almirantado_int, @almirantado_ext, @inpe]
+    
   end
-
-
-  def english
-    if params[:commit]
-      start_date = params[:start_date]
-      end_date = params[:end_date]
-      start_date = Date.parse start_date
-      end_date = Date.parse end_date
-    else
-      start_date = (Time.now - 1.day)
-      end_date = (Time.now + 1.day)
-    end
-    if start_date == nil
-      start_date = (Time.now - 5.day)
-    end
-    if end_date == nil
-      end_date = Time.now + 1.day
-    end
-    if start_date < (Time.now - 5.day)
-      start_date = (Time.now - 5.day)
-    end
-    if end_date < start_date
-      end_date = Time.now + 1.day
-    end
-
-    @almirantado_int = System.where("name ='almirantado_int' ") [0]
-    @almirantado_ext = System.where("name ='almirantado_ext' ") [0]
-    @inpe = System.where("name ='inpe' ") [0]
-
-    @almirantado_int_data = get_remobs(@almirantado_int, start_date, end_date)
-    @almirantado_ext_data = get_remobs(@almirantado_ext, start_date, end_date)
-    @inpe_data = get_remobs(@inpe, start_date, end_date)
-
-    @systems = [@almirantado_int, @almirantado_ext, @inpe]
-  end
-
-
 
   private
 
