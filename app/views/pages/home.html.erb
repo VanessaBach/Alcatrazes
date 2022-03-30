@@ -1,14 +1,14 @@
 <%= render 'shared/navbar' %>
 
-<div class="front-page" style="background-image: url('<%= image_path 'antartica1.jpg' %>')" id="home">
+<div class="front-page" style="background-image: url('<%= image_path 'abrolhos.jpg' %>')" id="home">
   <div class="container banner">
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-6 text-right">         
       </div>
       <div class="col-sm-12 col-md-6 col-lg-6 text-right ">
         <div class="front-page-content1 pb-5">
-          <h1>Sistema de Coleta de</h1>
-					<h1>Dados na Antártica</h1>
+          <h1>Boia Meteoceanográfica</h1>
+					<h1>Alcatrazes</h1>
 					<p>
       			<span id="banner-typed-text"></span>
     			</p>
@@ -31,39 +31,12 @@
 </div>
 <div class="projetos">
 	<div class= "container text-justify" id="projetos">
-		<h2>PROJETOS ATMOS e REMObs </h2>
-		<div class="row align-items-center">
-			<div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
-				<div class= "card-project text-align-center ">
-					<%= image_tag "ant2.jpg"%>
-				</div>			
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">
-				<h6>Neste verão antártico de 2021/2022, os projetos <strong>ATMOS</strong> e <strong>REMObs</strong> 
-				se uniram para montar um sistema completo 
-				de monitoramento das condições de ondas, ventos e correntes na região Antártica. Ampliamos a rede de coleta de dados 
-				no “Continente Gelado”, com o fundeio de 3 boias ondógrafo de fundeio, além da coleta de dados por meio de 
-				estações oceanográficas, lançamento de boias ondógrafo de deriva e instalação de estações meteorológicas nas 
-				proximidades da Estação Antártica Comandante Ferraz. <strong>Aqui você poderá ter acesso aos dados 
-				coletados em tempo real por nossos sistemas.</strong> </h6>
-			</div>			
-		</div>
-		<div class="row align-items-center mt-2">
-			<div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
-				<h6>Gerenciado pelo <strong>Laboratório de Estudos do Oceano e da 
-	      Atmosfera (LOA-OBT), do INPE, o ATMOS</strong> é uma iniciativa promissora da ciência, tecnologia e inovação, que visa a melhorar a compreensão das interações entre o gelo marinho-atmosfera-oceano-ondas e as trocas de calor, momentum 
-				(quantidade de movimento) e CO2 em suas interfaces no Oceano Austral. É um projeto componente do <strong>PROANTAR</strong> e financiado pelo <strong>CNPq/MCTI/CAPES</strong>.</h6>			
-				<h6>O projeto <strong>REMObs (REMO Observacional)</strong>, uma parceria entre o <strong>Centro de Hidrografia da Marinha (CHM) e a 
-				PETROBRAS</strong>, contempla uma união de esforços para o desenvolvimento e consolidação de uma Boia Meteoceanográfica Nacional
+		<h2>PROJETO REMO Observacional </h2>
+			<h6>O projeto <strong>REMObs (REMO Observacional)</strong> é uma parceria entre o <strong>Centro de Hidrografia da Marinha (CHM) e a 
+				PETROBRAS</strong>e contempla uma união de esforços para o desenvolvimento e consolidação de uma Boia Meteoceanográfica Nacional
 				(BMO-BR). E para isso, também prevê o estabelecimento de uma rede de coleta de dados operacionais no Atlântico Sul, fator
-				de grande importância para a calibração e validação de modelos de previsão meteoceanográfica.</h6>
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">
-				<div class= "card-project text-align-center">
-					<%= image_tag "ant1.jpg"%>
-				</div>	
-			</div>			
-		</div>
+				de grande importância para a calibração e validação de modelos de previsão meteoceanográfica. A boia Alcatrazes faz parte dessa rede de coleta
+				de dados.</h6>
 	</div>
 </div>
 <div class="tempo-real">
@@ -335,38 +308,5 @@
 			<div id="sst-plot" class='graph'>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="full-screen flex-container-center" id='first-full-screen'>
-	<p><i class="fas fa-times-circle"></i></p>
-	<div class='d-flex mt-1'>
-		<%= link_to image_tag("logo_pnboia.png", class: "nav-img p-0"), "https://www.marinha.mil.br/chm/dados-do-goos-brasil/pnboia-mapa", target: :_blank %>
-		<%= link_to image_tag("logo_remo.png", class: "nav-img p-0"), "http://www.fis.ufba.br/rede-de-modelagem-e-observacao-oceanografica-remo", target: :_blank %>
-		<%= link_to image_tag("logo_inpe.png", class: "nav-img p-0"), "https://loa-inpe.github.io/", target: :_blank %>
-	</div>
-	<h4 class='mt-2 text-center'><strong>Dados observacionais em tempo real para a Antártica</strong></h4>
-	<h4 class='mt-2 text-center'><strong>ATENÇÃO: DADOS EM FUSO UTC</strong></p>
-	<h4 class='m-0 text-center'>CÓDIGOS DISPONÍVEIS EM:</h3>
-	<div class="row  justify-content-center ">
-		<div class='col-4 card-git text-center  justify-content-center'>
-			<a href="https://github.com/soutobias/oceanoobsbrasil" target="_blank" class='text-center'>
-				<i class="fab fa-github m-0  p-0 text-center"></i>
-				<h4 class='m-0  p-0 text-center'>DATA</p>
-			</a>
-		</div>
-		<div class='col-4 card-git text-center justify-content-center'>
-			<a href="https://github.com/soutobias/remobs_api" target="_blank" class='text-center'>
-				<i class="fab fa-github m-0 p-0 text-center"></i>
-				<h4 class='m-0  p-0 text-center'>API</p>
-			</a>
-		</div>
-		<div class='col-4 card-git text-center'>
-			<a href="https://github.com/VanessaBach/Antarctic-Buoys" target="_blank" class='text-center'>
-				<i class="fab fa-github m-0  p-0 text-center"></i>
-				<h4 class='m-0  p-0 text-center'>WEB</p>
-			</a>
-		</div>
-		<h4 class='m-2 text-center'><strong>Site desenvolvido pela 1T(RM2-T) Vanessa Bach, do Centro de Hidrografia da Marinha</strong></h4>
 	</div>
 </div>
