@@ -14,32 +14,9 @@ u.save!
 
 s= System.new(
   name: "almirantado_int",
-  buoy_id: 20,
-  lat: "-62.088827", 
-  lon: "-58.415502"
+  buoy_id: 20, 
+  lat: "-24.120922", 
+  lon: "-45.706910"
 )
 s.save!
-
-s= System.new(
-  name: "almirantado_ext",
-  buoy_id: 20,
-  lat: "-62.189956,", 
-  lon: "-58.282637"
-)
-s.save!
-
-s= System.new(
-  name: "inpe",
-  buoy_id: 20,
-  lat: "-62.165118", 
-  lon: "-58.158510"
-)
-s.save!
-
-s= System.new(
-  name: "station",
-  buoy_id: 20,
-  lat: "-62.087280", 
-  lon: "-58.396869"
-)
-s.save!
+#buoy_id:27,

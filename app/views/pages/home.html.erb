@@ -8,7 +8,6 @@
       <div class="col-sm-12 col-md-6 col-lg-6 text-right ">
         <div class="front-page-content1 pb-5">
           <h1>Boia Meteoceanográfica</h1>
-					<h1>Alcatrazes</h1>
 					<p>
       			<span id="banner-typed-text"></span>
     			</p>
@@ -46,18 +45,16 @@
 			<div class="col-sm-12 col-md-6 col-lg-6 text-right"> 
 				<div id="map"
 							style="width: 100%; height: 600px;"
-							data-markers="<%= @systems.to_json %>"
+							data-markers="<%= @almirantado_int.to_json %>"
 							data-almirantadoint="<%= @almirantado_int_data.to_json %>"
 							data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6 text-right"> 					
 						<div class="card-product mt-1 box" id='almirantado_int'>
-							<%= image_tag "spotter_blue.jpg"%>
-						</div>					
-						<div class="card-product-infos w-100">
-							
-								<h3 class='text-center'>KELLER</h3>
+									
+							<div class="card-product-infos w-100">		
+								<h3 class='text-center'>ALCATRAZES</h3>
 								<% if @almirantado_int_data == {} || @almirantado_int_data[:date_time] == [] %>
 									<p  class='text-center'><strong>BOIA A SER LANÇADA</strong></p>
 								<% else %>
@@ -107,10 +104,9 @@
 											<% end %>
 										</div>
 									</div>
-								<% end %>							
-							
-						</div>
-								
+								<% end %>												
+							</div>
+						</div>	
 				
 			</div>
 		</div>
@@ -148,8 +144,6 @@
 		<% end %>
 		<div id="plotdata"
 			data-almirantadoint="<%= @almirantado_int_data.to_json %>"
-			data-almirantadoext="<%= @almirantado_ext_data.to_json %>"
-			data-inpe="<%= @inpe_data.to_json %>"
 			data-language='portuguese'>
 			<div id="wspd-plot" class='graph'>
 			</div>
@@ -158,14 +152,6 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-4">
 					<div id="wdir-plot-almirantadoint" class='graph'>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-4">
-					<div id="wdir-plot-almirantadoext" class='graph'>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-4">
-					<div id="wdir-plot-inpe" class='graph'>
 					</div>
 				</div>
 			</div>
@@ -177,15 +163,7 @@
 				<div class="col-sm-12 col-md-4">
 					<div id="wvdir-plot-almirantadoint" class='graph'>
 					</div>
-				</div>
-				<div class="col-sm-12 col-md-4">
-					<div id="wvdir-plot-almirantadoext" class='graph'>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-4">
-					<div id="wvdir-plot-inpe" class='graph'>
-					</div>
-				</div>
+				</div>				
 			</div>
 			<div id="mxwvht-plot" class='graph'>
 			</div>
