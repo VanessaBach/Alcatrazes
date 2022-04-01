@@ -28,7 +28,7 @@ const plotWvdir = (almirantadointData, language) => {
       x: almirantadointData.date_time,
       y: almirantadointData.wvdir,
       mode: 'lines+markers',
-      name: 'KELLER',
+      name: 'ALCATRAZES',
       line: {
         color: '#c22d45',
         width: 2
@@ -95,7 +95,7 @@ const plotWdir = (almirantadointData, language) => {
       x: almirantadointData.date_time,
       y: almirantadointData.wdir,
       mode: 'lines+markers',
-      name: 'KELLER',
+      name: 'ALCATRAZES',
       line: {
         color: '#c22d45',
         width: 2
@@ -172,7 +172,7 @@ const plotWdirg = (almirantadointData, language) => {
 
     var layout1 = {
       title: {
-        text: 'KELLER',
+        text: 'ALCATRAZES',
         font: {
           family: 'Fira Sans, sans-serif',
           size: 18
@@ -218,7 +218,7 @@ const plotWvdirg = (almirantadointData, language) => {
 
     var layout1 = {
       title: {
-        text: 'KELLER',
+        text: 'ALCATRAZES',
         font: {
           family: 'Fira Sans, sans-serif',
           size: 18
@@ -253,7 +253,7 @@ const plotWspd = (almirantadointData, language) => {
       x: almirantadointData.date_time,
       y: almirantadointData.wspd,
       mode: 'lines+markers',
-      name: 'KELLER',
+      name: 'ALCATRAZES',
       line: {
         color: '#c22d45',
         width: 2
@@ -319,7 +319,7 @@ const plotSwvht = (almirantadointData, language) => {
       x: almirantadointData.date_time,
       y: almirantadointData.swvht,
       mode: 'lines+markers',
-      name: 'KELLER',
+      name: 'ALCATRAZES',
       line: {
         color: '#c22d45',
         width: 2
@@ -383,7 +383,7 @@ const plotTp = (almirantadointData, language) => {
     x: almirantadointData.date_time,
     y: almirantadointData.tp,
     mode: 'lines+markers',
-    name: 'KELLER',
+    name: 'ALCATRAZES',
     line: {
       color: '#c22d45',
       width: 2
@@ -449,7 +449,7 @@ const plotSst = (almirantadointData, language) => {
       x: almirantadointData.date_time,
       y: almirantadointData.sst,
       mode: 'lines+markers',
-      name: 'KELLER',
+      name: 'ALCATRAZES',
       line: {
         color: '#c22d45',
         width: 2
