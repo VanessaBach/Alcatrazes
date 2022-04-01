@@ -5,8 +5,8 @@ System.destroy_all
 
 u = User.new(
   email: "vanessabach.r@gmail.com",
-  username: "pesquisadores",
-  password: "operantar",
+  username: "alcatrazes",
+  password: "pesquisa",
   admin: false
 )
 u.save!
