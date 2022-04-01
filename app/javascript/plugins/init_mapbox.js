@@ -6,7 +6,7 @@ const initMapbox = () => {
 	const fitMapToMarkers = (map, markers) => {
 		const bounds = new mapboxgl.LngLatBounds();
 		bounds.extend([ markers.lon, markers.lat ]);
-		map.fitBounds(bounds, { padding: 70, maxZoom: 11, duration: 0 });
+		map.fitBounds(bounds, { padding: 20, maxZoom: 9, duration: 0 });
 	};
   
 	const mapElement = document.getElementById('map');
@@ -69,7 +69,7 @@ const initMapboxDrifter = () => {
 	const fitMapToMarkers = (map, markers) => {
 		const bounds = new mapboxgl.LngLatBounds();
 		markers.forEach(marker => bounds.extend([ marker.lon, marker.lat ]));
-		map.fitBounds(bounds, { padding: 70, maxZoom: 8, duration: 0 });
+		map.fitBounds(bounds, { padding: 40, maxZoom: 8, duration: 0 });
 	};
   
 	const mapElement = document.getElementById('map_drifter');

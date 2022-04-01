@@ -42,16 +42,14 @@
 	<div class="container" id= "tempo-real">  
 		<h2 class="text-center mt-4">DADOS EM TEMPO REAL</h2>        
 		<div class="row">
-			<div class="col-sm-12 col-md-6 col-lg-6 text-right"> 
+			<div class="col-sm-12 col-md-12 col-lg-12 text-right"> 
 				<div id="map"
 							style="width: 100%; height: 600px;"
 							data-markers="<%= @almirantado_int.to_json %>"
 							data-almirantadoint="<%= @almirantado_int_data.to_json %>"
 							data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 				</div>
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-6 text-right"> 					
-						<div class="card-product mt-1 box" id='almirantado_int'>
+				<div class="card-product mt-1 box" id='almirantado_int'>
 									
 							<div class="card-product-infos w-100">		
 								<h3 class='text-center'>ALCATRAZES</h3>
@@ -106,9 +104,8 @@
 									</div>
 								<% end %>												
 							</div>
-						</div>	
-				
-			</div>
+						</div>
+			</div>			
 		</div>
 	</div>
 </div>
@@ -150,7 +147,7 @@
 			<div id="wdir-plot" class='graph'>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-md-4">
+				<div class="col-sm-12 col-md-12">
 					<div id="wdir-plot-almirantadoint" class='graph'>
 					</div>
 				</div>
@@ -160,7 +157,7 @@
 			<div id="wvdir-plot" class='graph'>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-md-4">
+				<div class="col-sm-12 col-md-12">
 					<div id="wvdir-plot-almirantadoint" class='graph'>
 					</div>
 				</div>				
